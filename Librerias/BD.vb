@@ -6,7 +6,7 @@ Public Class BD
         Try
             conexion.ConnectionString = "Data Source=158.227.106.20;Initial_
 Catalog=Amigos;Integrated_
-Security=False;_UserID=HADS;Password=********;_
+Security=False;_UserID=HADS19;Password=serpiente;_
 Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"
             conexion.Open()
         Catch ex As Exception
