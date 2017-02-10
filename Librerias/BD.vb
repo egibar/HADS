@@ -14,4 +14,7 @@ Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"
         End Try
         Return "CONEXION OK"
     End Function
+    Public Shared Sub cerrarconexion()
+        conexion.Close()
+    End Sub
 End Class
