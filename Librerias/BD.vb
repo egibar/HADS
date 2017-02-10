@@ -16,10 +16,7 @@ Public Class BD
 
     Public Shared Function cambiarPassword(ByVal codigo As Integer, ByVal email As String, ByVal pass As String) As String
         Dim st = "update Usuarios set Password = '" & pass & "', NumeroConfirmacion = -1 where Email ='" & email & "' and NumeroConfirmacion=" & codigo & ""
-        Dim numregs As Integer
-        comando = New SqlCommand(st, conexion)
-
-
+        
     End Function
     Public Shared Sub cerrarconexion()
         conexion.Close()
