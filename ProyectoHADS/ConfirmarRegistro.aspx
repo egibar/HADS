@@ -10,6 +10,8 @@
     <form id="form1" runat="server">
     <div>
     <p>Tu registro se ha completado con exito, ya puede loguearse sin problemas. Para volver pulse el boton.</p>
+         <asp:Label ID="LabelBienvenido" runat="server" Text="Bienvenid@"></asp:Label>&nbsp;
+            <asp:Label ID="LabelEmail" runat="server" ForeColor="#0066FF" Text="Email"></asp:Label><br />
            <asp:Button ID="btnVolverInicio" runat="server" CausesValidation="False" Text="Volver a inicio" />
     </div>
     </form>

@@ -10,24 +10,44 @@
 Option Strict On
 Option Explicit On
 
-
-Partial Public Class WebForm3
+Namespace WebApplication2
     
-    '''<summary>
-    '''form1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-    
-    '''<summary>
-    '''btnVolverInicio control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnVolverInicio As Global.System.Web.UI.WebControls.Button
-End Class
+    Partial Public Class WebForm3
+        
+        '''<summary>
+        '''form1 control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+        
+        '''<summary>
+        '''LabelBienvenido control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents LabelBienvenido As Global.System.Web.UI.WebControls.Label
+        
+        '''<summary>
+        '''LabelEmail control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents LabelEmail As Global.System.Web.UI.WebControls.Label
+        
+        '''<summary>
+        '''btnVolverInicio control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents btnVolverInicio As Global.System.Web.UI.WebControls.Button
+    End Class
+End Namespace
