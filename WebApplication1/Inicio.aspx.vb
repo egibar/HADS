@@ -12,6 +12,7 @@ Public Class WebForm1
         Label1Informativo.Visible = True
         If (BD.login(Email.Text, Password.Text) = True) Then
             Label1Informativo.Text = "Enhorabuena ha iniciado sesión"
+            Response.Redirect("WebForm5.aspx")
         Else
             Label1Informativo.Text = "No esta registrado como usuario, registrese para acceder"
         End If

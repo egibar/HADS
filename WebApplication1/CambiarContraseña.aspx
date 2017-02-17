@@ -56,7 +56,7 @@
         <asp:Label ID="NuevoPass" runat="server" Text="Introduce la nueva contraseña"></asp:Label>
         <br />
        
-                <asp:TextBox ID="TextBoxPassword"TextMode="Password" runat="server" Height="25px" Width="220px"></asp:TextBox>
+                <asp:TextBox ID="TextBoxPassword" TextMode="Password" runat="server" Height="25px" Width="220px"></asp:TextBox>
                                         &nbsp;<asp:RequiredFieldValidator ID="RequiredValidatorPassword" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
 
                 &nbsp;<asp:RegularExpressionValidator ID="RegExprValidPassword" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="No es una contraseña válida" ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" ForeColor="Red"></asp:RegularExpressionValidator>
@@ -67,7 +67,7 @@
         <asp:Label ID="NuevoPass2" runat="server" Text="Vuelve a introducir la contraseña"></asp:Label>
         <br />
 
-        <asp:TextBox ID="TextBoxPassword2" TextMode="Password"runat="server" Height="25px" Width="219px"></asp:TextBox>
+        <asp:TextBox ID="TextBoxPassword2" TextMode="Password" runat="server" Height="25px" Width="219px"></asp:TextBox>
                                 &nbsp;<asp:RequiredFieldValidator ID="RequiredValidatorPassword2" runat="server" ControlToValidate="TextBoxPassword2" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
 
         &nbsp;

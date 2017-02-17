@@ -149,6 +149,15 @@ Partial Public Class WebForm4
     Protected WithEvents NuevoPass As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''TextBoxPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TextBoxPassword As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''RequiredValidatorPassword control.
     '''</summary>
     '''<remarks>
@@ -174,6 +183,15 @@ Partial Public Class WebForm4
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents NuevoPass2 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''TextBoxPassword2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TextBoxPassword2 As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''RequiredValidatorPassword2 control.

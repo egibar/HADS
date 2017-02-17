@@ -16,6 +16,9 @@ Public Class WebForm4
         TextBoxPassword.Visible = False
         NuevoPass2.Visible = False
         TextBoxPassword2.Visible = False
+        RequiredValidatorPassword.Visible = False
+        RequiredValidatorPassword2.Visible = False
+
         conectarDB()
     End Sub
 
@@ -63,6 +66,8 @@ Public Class WebForm4
             NuevoPass2.Visible = True
             TextBoxPassword2.Visible = True
             btnCambiarContraseña.Visible = True
+            RequiredValidatorPassword2.Visible = True
+            RequiredValidatorPassword2.Visible = True
         Else
             LabelRespCorrecta.Visible = True
             LabelRespCorrecta.Text = "Esa no es la respuesta correcta a la pregunta."

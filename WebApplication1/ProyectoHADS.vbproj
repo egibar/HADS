@@ -89,6 +89,7 @@
     <Content Include="Registro.aspx" />
     <Content Include="ConfirmarRegistro.aspx" />
     <Content Include="CambiarContraseña.aspx" />
+    <Content Include="WebForm5.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -136,6 +137,13 @@
     </Compile>
     <Compile Include="CambiarContraseña.aspx.vb">
       <DependentUpon>CambiarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.vb">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm5.aspx.vb">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
