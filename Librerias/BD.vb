@@ -100,7 +100,9 @@ Public Class BD
         Return (comando.ExecuteReader())
     End Function
 
-
+    Public Shared Function getContraseña(ByVal email As String) As SqlDataReader
+       
+    End Function
 
 End Class
 
