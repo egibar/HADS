@@ -11,8 +11,8 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebForm2
-    
+Partial Public Class WebForm1
+
     '''<summary>
     '''form1 control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-    
+
     '''<summary>
     '''Titulo control.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Titulo As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''LabelEmail control.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents LabelEmail As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''Email control.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Email As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''RequiredValidatorEmail control.
     '''</summary>
@@ -57,16 +57,16 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RequiredValidatorEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
-    
+
     '''<summary>
-    '''RegularExpressionValidator1 control.
+    '''RegExprValidEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RegularExpressionValidator1 As Global.System.Web.UI.WebControls.RegularExpressionValidator
-    
+    Protected WithEvents RegExprValidEmail As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
     '''<summary>
     '''LabelPassword control.
     '''</summary>
@@ -75,7 +75,7 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents LabelPassword As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''Password control.
     '''</summary>
@@ -84,7 +84,7 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Password As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''RequiredValidatorPassword control.
     '''</summary>
@@ -93,7 +93,16 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RequiredValidatorPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
-    
+
+    '''<summary>
+    '''RegExprValid2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RegExprValid2 As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
     '''<summary>
     '''ButtonLogin control.
     '''</summary>
@@ -102,7 +111,7 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ButtonLogin As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''HyperLinkRegistrarse control.
     '''</summary>
@@ -111,7 +120,7 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents HyperLinkRegistrarse As Global.System.Web.UI.WebControls.HyperLink
-    
+
     '''<summary>
     '''HyperLinkCambiarPassword control.
     '''</summary>
@@ -120,4 +129,13 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents HyperLinkCambiarPassword As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''Label1Informativo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label1Informativo As Global.System.Web.UI.WebControls.Label
 End Class

@@ -1,14 +1,14 @@
 ﻿Imports System.Net.Mail
 
 Public Class Email
-    Public Function enviarEmail() As Boolean
+    Public Function enviarEmail(ByVal emaildestino As String, ByVal subject As String, ByVal body As String) As Boolean
         Try
             'Direccion de origen 
-            Dim from_address As New MailAddress("email del que envia", "nombre del que envia")
+            Dim from_address As New MailAddress("hads19hads@gmail.com", "HADS19")
             'Direccion de destino 
-            Dim to_address As New MailAddress("email de destino")
+            Dim to_address As New MailAddress(emaildestino)
             'Password de la cuenta 
-            Dim from_pass As String = "************"
+            Dim from_pass As String = "asierolatz"
             'Objeto para el cliente smtp
             Dim smtp As New SmtpClient
             'Host en este caso el servidor de gmail
@@ -24,9 +24,9 @@ Public Class Email
             'Creamos el mensaje con los parametros de origen y destino 
             Dim message As New MailMessage(from_address, to_address)
             'Añadimos el asunto 
-            message.Subject = "subject"
+            message.Subject = subject
             'Concatenamos el cuerpo del mensaje a la plantilla 
-            message.Body = "<html><head></head><body>" + "body" + "</body></html>"
+            message.Body = "<html><head></head><body>" + body + "</body></html>"
             'Definimos el cuerpo como html para poder escojer mejor como lo mandamos 
             message.IsBodyHtml = True
             'Se envia el correo 
