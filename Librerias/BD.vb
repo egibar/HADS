@@ -52,7 +52,7 @@ Public Class BD
     End Function
 
     Public Shared Function login(ByVal email As String, ByVal pass As String) As Boolean
-        Dim st = "select count(*) from Usuarios where email ='" & email & "' and pass='" & pass & "' "
+        Dim st = "select count(*) from Usuarios where email ='" & email & "' and pass='" & pass & "' confirmado = 1"
         comando = New SqlCommand(st, conexion)
         'cuando haya algún usuario que coincida
         If comando.ExecuteScalar() = 1 Then
@@ -99,7 +99,6 @@ Public Class BD
         comando = New SqlCommand(st, conexion)
         Return (comando.ExecuteReader())
     End Function
-
 
 End Class
 
