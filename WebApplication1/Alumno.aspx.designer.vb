@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ConfirmarRegistro
+Partial Public Class Alumno
 
     '''<summary>
     '''Control form1.
@@ -23,29 +23,11 @@ Partial Public Class ConfirmarRegistro
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control Usuario.
+    '''Control Button2CerrarSesion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Usuario As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control btnVolverInicio.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnVolverInicio As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control Label1Informativo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Label1Informativo As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Button2CerrarSesion As Global.System.Web.UI.WebControls.Button
 End Class

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ConfirmarRegistro.aspx.vb" Inherits="WebApplication1.WebForm3" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ConfirmarRegistro.aspx.vb" Inherits="WebApplication1.ConfirmarRegistro" %>
 
 <!DOCTYPE html>
 

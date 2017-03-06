@@ -2,7 +2,7 @@
 
 Imports System.Data.SqlClient
 
-Public Class WebForm4
+Public Class CambiarContraseña
     Inherits System.Web.UI.Page
 
     Dim usuario As SqlDataReader

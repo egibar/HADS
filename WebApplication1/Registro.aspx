@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Registro.aspx.vb" Inherits="WebApplication1.WebForm2" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Registro.aspx.vb" Inherits="WebApplication1.Registro" %>
 
 <!DOCTYPE html>
 
@@ -19,9 +19,10 @@
     <form id="form1" runat="server">
     <div class="titulo">
     
-        <asp:Label ID="Titulo" runat="server" Text="REGISTRO" Font-Bold="True" Font-Size="XX-Large" Font-Strikeout="False" Height="65px" style="margin-left: 0px" Width="1039px"></asp:Label>
+        <asp:Label ID="Titulo" runat="server" Text="REGISTRO" Font-Bold="True" Font-Size="XX-Large" Font-Strikeout="False" Height="65px" style="margin-left: 0px" Width="1057px"></asp:Label>
     </div>
    <div>
+       <br />
        <asp:Label ID="LabelNombre" runat="server" Text="Nombre"></asp:Label><br />
        <asp:TextBox ID="Nombre" runat="server" Height="25px" Width="220px"></asp:TextBox>
        <asp:RequiredFieldValidator ID="RequiredValidatorNombre" runat="server" ControlToValidate="Nombre" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ConfirmarRegistro
+Partial Public Class TareasAlumno
 
     '''<summary>
     '''Control form1.
@@ -23,29 +23,38 @@ Partial Public Class ConfirmarRegistro
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control Usuario.
+    '''Control ButtonCerrarSesion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Usuario As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ButtonCerrarSesion As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control btnVolverInicio.
+    '''Control DDList1Asig.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnVolverInicio As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents DDList1Asig As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control Label1Informativo.
+    '''Control Button1VerTareas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label1Informativo As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Button1VerTareas As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control GridView1Tareas.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridView1Tareas As Global.System.Web.UI.WebControls.GridView
 End Class
