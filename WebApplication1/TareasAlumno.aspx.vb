@@ -37,6 +37,7 @@ Public Class TareasAlumno
         Session("tabla") = table
         For i = 0 To 4 'cada columna de la tabla que queremos mostrar
             GridView1Tareas.Columns.Item(i + 1).Visible = True
+
             GridView1Tareas.Items.Item(i).Selected = True
         Next
         GridView1Tareas.DataSource = table
