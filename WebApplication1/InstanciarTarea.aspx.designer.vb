@@ -32,22 +32,22 @@ Partial Public Class InstanciarTarea
     Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control TextBox1Usuario.
+    '''Control Label1Usuario.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextBox1Usuario As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Label1Usuario As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control TextBox1Tarea.
+    '''Control Label2Tarea.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextBox1Tarea As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Label2Tarea As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control TextBox1HEstimadas.
@@ -77,6 +77,15 @@ Partial Public Class InstanciarTarea
     Protected WithEvents ButtonCrearTarea As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control LabelTareaCreada.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents LabelTareaCreada As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control HLink1Alumnos.
     '''</summary>
     '''<remarks>
@@ -84,4 +93,13 @@ Partial Public Class InstanciarTarea
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents HLink1Alumnos As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''Control GridViewTareasAsignatura.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridViewTareasAsignatura As Global.System.Web.UI.WebControls.GridView
 End Class

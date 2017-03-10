@@ -33,36 +33,42 @@
      <asp:Button ID="Button2" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" />    
         <br />
         <br />
-        <div style="height: 415px; width: 435px; float:left;" id="divleft">
-            <p align="left" id="Usuario" style="margin-left: 10px">Usuario</p>
-            <p align="left">
-                <asp:TextBox ID="TextBox1Usuario" runat="server" Width="262px" style="margin-left: 10px"></asp:TextBox>
+        <div style="height: 575px; width: 444px; float:left;" id="divleft">
+            <p align="left" id="Usuario" style="margin-left: 10px; margin-bottom: 16px;">Usuario:&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label1Usuario" runat="server"></asp:Label>
             </p>
-            <p align="left" id="Tarea" style="margin-left: 11px">Tarea</p>
-                <asp:TextBox ID="TextBox1Tarea" runat="server" Width="262px" style="margin-left: 10px"></asp:TextBox>
+            <p align="left" id="Tarea" style="margin-left: 11px; margin-bottom: 16px;">Tarea:&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label2Tarea" runat="server"></asp:Label>
+            </p>
+            <p align="left" id="HorasEstimadas" style="margin-left: 10px; margin-bottom: 16px;">Horas Estimadas</p>
+                <asp:TextBox ID="TextBox1HEstimadas" runat="server" Width="200px" style="margin-left: 10px"></asp:TextBox>
             <br />
-            <p align="left" id="HorasEstimadas" style="margin-left: 10px">Horas Estimadas</p>
-                <asp:TextBox ID="TextBox1HEstimadas" runat="server" Width="262px" style="margin-left: 10px"></asp:TextBox>
-            <br />
-            <p align="left" id="HorasReales" style="margin-left: 10px; margin-bottom: 5px;">Horas Reales</p> 
-                <asp:TextBox ID="TextBox1HReales" runat="server" Width="262px" style="margin-left: 10px"></asp:TextBox>
+            <p align="left" id="HorasReales" style="margin-left: 10px; margin-bottom: 16px;">Horas Reales</p> 
+                <asp:TextBox ID="TextBox1HReales" runat="server" Width="200px" style="margin-left: 10px"></asp:TextBox>
          
             <br/>
             <br/>
             <br/>
-            <asp:Button ID="ButtonCrearTarea" runat="server" Height="45px" Text="Crear Tarea" Width="185px" />
+            <asp:Button ID="ButtonCrearTarea" runat="server" Height="45px" Align="right" Text="Crear Tarea" Width="168px" />
             <br/>
             <br/>
             <br/>
             <br/>
+
+            <asp:Label ID="LabelTareaCreada" runat="server" Font-Bold="True" Font-Size="Medium" Visible="False"></asp:Label>
+
             <br/>
-            
+            <br/>
+            <br/>
+            <br/>
                 <asp:HyperLink ID="HLink1Alumnos" runat="server" Font-Names="Arial" Font-Size="Medium" NavigateUrl="~/Alumno.aspx">Página Anterior</asp:HyperLink>
             
         </div>
-        <div style="height: 415px; width: 640px;float:right; margin-left: 7px;" id="divRight">
+        <div style="height: 573px; width: 677px; float:right; margin-left: 26px;" id="divRight">
             <br />
             <br />
+            <asp:GridView ID="GridViewTareasAsignatura" runat="server" Height="235px" Width="483px">
+            </asp:GridView>
         </div>
     </div>
 

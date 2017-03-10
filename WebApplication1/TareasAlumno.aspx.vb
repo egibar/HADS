@@ -5,22 +5,25 @@ Imports System.Data.SqlClient
 Public Class TareasAlumno
     Inherits System.Web.UI.Page
 
-    Dim dapAlmns As New SqlDataAdapter
-    Dim dstAlmns As New DataSet
-    Dim tblAlmns As New DataTable
-    Dim rowAlmns As DataRow
-
-    Dim asignaturas As New DataTable
-    Dim table As New DataTable
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
         If Not Page.IsPostBack Then
-            Dim alumno As String = Session("alumno")
+            Dim dapAlmns As New SqlDataAdapter
+            Dim dstAlmns As New DataSet
+            Dim tblAlmns As New DataTable
+            Dim alumno As String
+
+            alumno = Session("alumno")
+
             conectarDB()
             dapAlmns = New SqlDataAdapter("SELECT GruposClase.codigoasig FROM GruposClase INNER JOIN EstudiantesGrupo ON EstudiantesGrupo.Grupo=GruposClase.codigo WHERE EstudiantesGrupo.email='" & alumno & "'", getconexion())
+            'dapAlmns = New SqlDataAdapter("select GruposClase.codigoasig from GruposClase, EstudiantesGrupo where EstudiantesGrupo.Grupo=GruposClase.codigo and EstudiantesGrupo.email='" & alumno & "'", getconexion())
+
             dapAlmns.Fill(dstAlmns, "AsignaturasAlumno")
-            DDList1Asig.DataTextField = "codigoasig"
+
             DDList1Asig.DataSource = dstAlmns.Tables("AsignaturasAlumno")
+            DDList1Asig.DataTextField = "codigoasig"
             DDList1Asig.DataBind()
             cerrarconexionDB()
         End If
@@ -33,15 +36,28 @@ Public Class TareasAlumno
     End Sub
 
     Protected Sub Button1VerTareas_Click(sender As Object, e As EventArgs) Handles Button1VerTareas.Click
-        table = getTablaTareas(DDList1Asig.Text)
-        Session("tabla") = table
-        For i = 0 To 4 'cada columna de la tabla que queremos mostrar
-            GridView1Tareas.Columns.Item(i + 1).Visible = True
-
-            GridView1Tareas.Items.Item(i).Selected = True
-        Next
-        GridView1Tareas.DataSource = table
+        Dim dapTarea As New SqlDataAdapter
+        Dim dstTarea As New DataSet
+        Dim tblTarea As New DataTable
+        Dim alumno As String
+        Dim asigSelected As String
+       
+        asigSelected = DDList1Asig.SelectedItem.Text
+        alumno = Session("alumno")
+        dapTarea = New SqlDataAdapter("select TareasGenericas.Codigo, TareasGenericas.Descripcion, TareasGenericas.HEstimadas, TareasGenericas.TipoTarea from TareasGenericas where TareasGenericas.codAsig='" & asigSelected & "'", getconexion())
+        dapTarea.Fill(dstTarea, "TareasAlumno")
+        tblTarea = dstTarea.Tables("TareasAlumno")
+       
+        GridView1Tareas.DataSource = tblTarea
         GridView1Tareas.DataBind()
+
+    End Sub
+  
+    Protected Sub GridView1Tareas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridView1Tareas.SelectedIndexChanged
+
+        Dim codigoTarea As String
+        codigoTarea = GridView1Tareas.SelectedRow.Cells(1).Text
+        Response.Redirect("InstanciarTarea.aspx?codigo=" & codigoTarea & "")
 
     End Sub
 End Class

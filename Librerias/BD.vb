@@ -109,21 +109,5 @@ Public Class BD
         Return (comando.ExecuteReader())
     End Function
 
-    Public Shared Function getTablaTareas(ByVal asignatura As String) As DataTable
-
-        Dim adapter As New SqlDataAdapter
-        Dim dset As New DataSet
-        Dim tabla As New DataTable
-
-        conectarDB()
-        ' Dim conexion As SqlConnection = getconexion()
-        Dim comando As New SqlCommand("SELECT Codigo,CodAsig,Descripcion,HEstimadas,TipoTarea FROM TareasGenericas WHERE Explotacion='true' AND  CodAsig='" & asignatura & "'", conexion)
-        adapter = New SqlDataAdapter(comando)
-        adapter.Fill(dset, "tareas")
-        tabla = dset.Tables("tareas")
-        cerrarconexionDB()
-        Return tabla
-
-    End Function
 End Class
 
