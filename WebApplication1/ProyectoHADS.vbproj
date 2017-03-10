@@ -201,8 +201,11 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\PublishProfiles\HADS191617 - FTP.pubxml" />
+    <None Include="My Project\PublishProfiles\HADS191617 - Web Deploy.pubxml" />
     <None Include="My Project\PublishProfiles\HADS19HADS - FTP.pubxml" />
     <None Include="My Project\PublishProfiles\HADS19HADS - Web Deploy.pubxml" />
+    <None Include="My Project\PublishProfiles\ProyectoHADS20170310124305 - Web Deploy.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

@@ -45,7 +45,7 @@ Public Class InstanciarTarea
         HEstimadas = TextBox1HEstimadas.Text
         HReales = TextBox1HReales.Text
 
-        dapTareas = New SqlDataAdapter("select Email, CodTarea, HEstimadas, HReales from EstudiantesTareas where Email='" & Usuario & "'", getconexion())
+        dapTareas = New SqlDataAdapter("select Email, CodTarea, HEstimadas, HReales from EstudiantesTareas where Email='" & Alumno & "'", getconexion())
         Dim Builder As SqlCommandBuilder = New SqlCommandBuilder(dapTareas)
 
         dapTareas.InsertCommand = Builder.GetInsertCommand
