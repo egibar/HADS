@@ -20,12 +20,18 @@ Public Class Registro
             NumConf = CLng(Rnd() * 9000000) + 1000000
 
             Dim resp As String
+            MsgBox("INSERTANDO")
             resp = BD.insertarUsuario(Email.Text, Nombre.Text, Pregunta.Text, Respuesta.Text, DNI.Text, NumConf, 0, vbNullString, vbNullString, Password.Text)
+            MsgBox("INSERTADO??")
             If (resp = BD.INSERTADO) Then
+                MsgBox("MAIL")
                 If (mail(NumConf, Email.Text)) Then
+                    MsgBox("ENVIADO")
                     Label1Info.ForeColor = Drawing.Color.Green
                     Label1Info.Text = "Se ha enviado un correo a " + Email.Text
                 Else
+                    MsgBox("NO ENVIADO")
+
                     Label1Info.ForeColor = Drawing.Color.Red
                     Label1Info.Text = "Ha habido un error al enviar el email"
                 End If
@@ -44,6 +50,7 @@ Public Class Registro
             "<br/><br/><a href=" + url + ">" + url + "</a> " + "<br/><br/>Un saludo"
 
         Dim mailSender As New Email
+        MsgBox("HOLA")
         Return mailSender.enviarEmail(address, subject, texto)
 
     End Function

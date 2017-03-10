@@ -15,7 +15,7 @@ Public Class BD
         Try
             'conexion.ConnectionString = "Data Source=158.227.106.20;Initial Catalog=HADS19_Usuarios;Integrated Security=False;User ID=HADS19;Password=serpiente; Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"
             'conexion.ConnectionString = "Server=tcp:hads19asier.database.windows.net,1433;Initial Catalog=HADS19_Usuarios;Persist Security Info=False;User ID=HADS19@hads19asier;Password=adminSerpiente19;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
-            conexion.ConnectionString = "Server=tcp:hads19tareas.database.windows.net,1433;Initial Catalog=HADS19TAREAS;Persist Security Info=False;User ID=HADS19@hads19tareas;Password=Serpiente19;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+            conexion.ConnectionString = "Server=tcp:hads19tareas.database.windows.net,1433;Initial Catalog=HADS19TAREAS;Persist Security Info=False;User ID=asierolatz19;Password=Serpiente19;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
             conexion.Open()
         Catch ex As Exception
             Return "ERROR DE CONEXIÓN: " + ex.Message
