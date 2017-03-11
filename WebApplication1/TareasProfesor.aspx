@@ -26,11 +26,11 @@
             width: 204px;
         }
         #form1 {
-            height: 676px;
+            height: 754px;
         }
       </style>
 </head>
-<body style="height: 620px">
+<body style="height: 746px">
     <form id="form1" runat="server">
     <div id="divTitulo" style="height: 141px; margin-top: 9px;" title="ALUMNOS">
      <p align="center">
@@ -41,7 +41,7 @@
         <p align="center">GESTIÓN DE TAREAS GENÉRICAS</p>
         
     </div>
-&nbsp;<div style="margin-left: 18px; width: 1075px; height: 349px;">
+&nbsp;<div style="margin-left: 18px; width: 1075px; height: 399px;">
             <br />
         <p align="left">
             Seleccionar Asignatura:</p>

@@ -9,23 +9,26 @@ Public Class Inicio
     End Sub
 
     Protected Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
+
         Dim usuario As SqlDataReader
+        Dim tipousu As String
         conectarDB()
-        Label1Informativo.Visible = True
-        If (login(Email.Text, Password.Text) = True) Then
-            usuario = getUsuario(Email.Text)
+        usuario = login(Email.Text, Password.Text)
+
+        If usuario.HasRows Then
             usuario.Read()
-            If usuario.Item("tipo") = "A" Then
-                Session("alumno") = Email.Text
-                Label1Informativo.Text = "Enhorabuena ha iniciado sesión" + Email.Text
-                Response.Redirect("Alumno.aspx")
-            ElseIf usuario.Item("tipo") = "P" Then
-                Session("profesor") = Email.Text
-                Label1Informativo.Text = "Enhorabuena ha iniciado sesión" + Email.Text
-                Response.Redirect("Profesor.aspx")
-            End If
+            Session("email") = Email.Text
+            tipousu = usuario.Item("tipo")
             usuario.Close()
+
+            If tipousu = "P" Then
+                Response.Redirect("Profesor.aspx")
+            Else
+                Response.Redirect("Alumno.aspx")
+            End If
+
         Else
+            Label1Informativo.Visible = True
             Label1Informativo.Text = "No esta registrado como usuario, registrese para acceder"
         End If
         cerrarconexionDB()

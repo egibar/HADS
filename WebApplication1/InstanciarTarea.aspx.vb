@@ -13,7 +13,7 @@ Public Class InstanciarTarea
         Dim dstTareas As New DataSet
         Dim tblTareas As DataTable
 
-        Alumno = Session("alumno")
+        Alumno = Session("email")
         CodigoTarea = Request.QueryString("codigo")
 
         Label1Usuario.Text = Alumno
@@ -40,14 +40,14 @@ Public Class InstanciarTarea
         Dim tblTareas As DataTable
         Dim drowTareas As DataRow
 
-        Alumno = Session("alumno")
+        Alumno = Session("email")
         CodigoTarea = Label2Tarea.Text
         HEstimadas = TextBox1HEstimadas.Text
         HReales = TextBox1HReales.Text
 
         dapTareas = New SqlDataAdapter("select Email, CodTarea, HEstimadas, HReales from EstudiantesTareas where Email='" & Alumno & "'", getconexion())
         Dim Builder As SqlCommandBuilder = New SqlCommandBuilder(dapTareas)
-
+        ' Code to modify data in DataSet 
         dapTareas.InsertCommand = Builder.GetInsertCommand
         dapTareas.Fill(dstTareas, "TareasEspecificasAlumno")
         tblTareas = dstTareas.Tables("TareasEspecificasAlumno")
@@ -61,10 +61,11 @@ Public Class InstanciarTarea
         tblTareas.Rows.Add(drowTareas)
 
         Try
+            ' Without the SqlCommandBuilder this line would fail.
             dapTareas.Update(dstTareas, "TareasEspecificasAlumno")
             tblTareas.AcceptChanges()
 
-            GridViewTareasAsignatura.DataSource = dapTareas
+            GridViewTareasAsignatura.DataSource = tblTareas
             GridViewTareasAsignatura.DataBind()
 
             LabelTareaCreada.Text = "Una nueva tarea ha sido creada"

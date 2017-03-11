@@ -52,7 +52,7 @@
          <p align:"right" style="width: 180px">Horas Estimadas</p>
          <asp:TextBox ID="TextBox3TipoTarea" runat="server" Width="169px"></asp:TextBox>
          <p align:"right" style="width: 178px">Tipo de Tareas</p>
-         <asp:DropDownList ID="DDList1Asignatura0" runat="server" Width="185px">
+         <asp:DropDownList ID="DDList1TipoTareas" runat="server" Width="185px">
          </asp:DropDownList>
          <br/>
          <br/>

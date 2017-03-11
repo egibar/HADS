@@ -20,40 +20,35 @@ Public Class Registro
             NumConf = CLng(Rnd() * 9000000) + 1000000
 
             Dim resp As String
-            MsgBox("INSERTANDO")
             resp = BD.insertarUsuario(Email.Text, Nombre.Text, Pregunta.Text, Respuesta.Text, DNI.Text, NumConf, 0, vbNullString, vbNullString, Password.Text)
-            MsgBox("INSERTADO??")
             If (resp = BD.INSERTADO) Then
-                MsgBox("MAIL")
                 If (mail(NumConf, Email.Text)) Then
-                    MsgBox("ENVIADO")
                     Label1Info.ForeColor = Drawing.Color.Green
                     Label1Info.Text = "Se ha enviado un correo a " + Email.Text
                 Else
-                    MsgBox("NO ENVIADO")
-
                     Label1Info.ForeColor = Drawing.Color.Red
                     Label1Info.Text = "Ha habido un error al enviar el email"
                 End If
             End If
         End If
-
         BD.cerrarconexionDB()
     End Sub
+
     Protected Function mail(ByVal num As Integer, ByVal address As String) As Boolean
+
         Dim subject As String = "Confirmacion de registro"
         Dim url As String = "http://hads19hads.azurewebsites.net/ConfirmarRegistro.aspx?mail=" + address + "&cod=" + num.ToString
         ' Dim url As String = "http://localhost:35845/ConfirmarRegistro.aspx?mail=" + address + "&cod=" + num.ToString
-
 
         Dim texto As String = "Bienvenido a nuestra pagina, pulsa en el siguiente enlace para confirmar el registro" +
             "<br/><br/><a href=" + url + ">" + url + "</a> " + "<br/><br/>Un saludo"
 
         Dim mailSender As New Email
-        MsgBox("HOLA")
+        'MsgBox("HOLA")
         Return mailSender.enviarEmail(address, subject, texto)
 
     End Function
+
     Protected Sub btnVolverInicio_Click(sender As Object, e As EventArgs) Handles btnVolverInicio.Click
         Response.Redirect("Inicio.aspx")
     End Sub

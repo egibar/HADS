@@ -55,7 +55,7 @@
        <asp:Label ID="LabelDNI" runat="server" Text="DNI"></asp:Label><br />
        <asp:TextBox ID="DNI" runat="server" Height="25px" Width="220px"></asp:TextBox>
        <asp:RequiredFieldValidator ID="RequiredValidatorDNI" runat="server" ControlToValidate="DNI" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-       <asp:RegularExpressionValidator ID="RegExprValidDNI" runat="server" ControlToValidate="DNI" ErrorMessage="No es un DNI válido" ValidationExpression="^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$" ForeColor="Red"></asp:RegularExpressionValidator>
+       <asp:RegularExpressionValidator ID="RegExprValidDNI" runat="server" ControlToValidate="DNI" ErrorMessage="No es un DNI válido" ValidationExpression="^[0-9]{8}$" ForeColor="Red"></asp:RegularExpressionValidator>
 
        <br />
        <asp:Label ID="LabelPregunta" runat="server" Text="Pregunta Secreta"></asp:Label><br />

@@ -14,11 +14,11 @@ Public Class TareasAlumno
             Dim tblAlmns As New DataTable
             Dim alumno As String
 
-            alumno = Session("alumno")
+            alumno = Session("email")
 
             conectarDB()
-            dapAlmns = New SqlDataAdapter("SELECT GruposClase.codigoasig FROM GruposClase INNER JOIN EstudiantesGrupo ON EstudiantesGrupo.Grupo=GruposClase.codigo WHERE EstudiantesGrupo.email='" & alumno & "'", getconexion())
-            'dapAlmns = New SqlDataAdapter("select GruposClase.codigoasig from GruposClase, EstudiantesGrupo where EstudiantesGrupo.Grupo=GruposClase.codigo and EstudiantesGrupo.email='" & alumno & "'", getconexion())
+            'dapAlmns = New SqlDataAdapter("SELECT GruposClase.codigoasig FROM GruposClase INNER JOIN EstudiantesGrupo ON EstudiantesGrupo.Grupo=GruposClase.codigo WHERE EstudiantesGrupo.email='" & alumno & "'", getconexion())
+            dapAlmns = New SqlDataAdapter("select GruposClase.codigoasig from GruposClase, EstudiantesGrupo where EstudiantesGrupo.Grupo=GruposClase.codigo and EstudiantesGrupo.email='" & alumno & "'", getconexion())
 
             dapAlmns.Fill(dstAlmns, "AsignaturasAlumno")
 
@@ -36,14 +36,16 @@ Public Class TareasAlumno
     End Sub
 
     Protected Sub Button1VerTareas_Click(sender As Object, e As EventArgs) Handles Button1VerTareas.Click
+
         Dim dapTarea As New SqlDataAdapter
         Dim dstTarea As New DataSet
         Dim tblTarea As New DataTable
         Dim alumno As String
         Dim asigSelected As String
-       
+
+        alumno = Session("email")
         asigSelected = DDList1Asig.SelectedItem.Text
-        alumno = Session("alumno")
+
         dapTarea = New SqlDataAdapter("select TareasGenericas.Codigo, TareasGenericas.Descripcion, TareasGenericas.HEstimadas, TareasGenericas.TipoTarea from TareasGenericas where TareasGenericas.codAsig='" & asigSelected & "'", getconexion())
         dapTarea.Fill(dstTarea, "TareasAlumno")
         tblTarea = dstTarea.Tables("TareasAlumno")

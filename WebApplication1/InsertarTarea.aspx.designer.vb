@@ -68,13 +68,13 @@ Partial Public Class InsertarTarea
     Protected WithEvents TextBox3TipoTarea As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control DDList1Asignatura0.
+    '''Control DDList1TipoTareas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DDList1Asignatura0 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DDList1TipoTareas As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control Button1AñadirTarea.
