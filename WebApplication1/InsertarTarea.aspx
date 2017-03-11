@@ -8,7 +8,7 @@
     <title>Gestión de Tarea Alumno</title>
     <style type="text/css">
         body{
-             font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             height: 880px;
             margin-bottom: 53px;
         }

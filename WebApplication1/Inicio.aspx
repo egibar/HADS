@@ -8,6 +8,9 @@
     <!--<link rel="stylesheet"
           href="diseno.css"/>-->
       <style type="text/css">
+           body{
+             font-family: Georgia, 'Times New Roman', Times, serif;
+          }
           .labels {
               height: 321px;
           }
@@ -18,8 +21,10 @@
 </head>
 <body style="height: 699px">
     <form id="form1" runat="server">
-  <div class="titulo">
-     <asp:Label ID="Titulo" runat="server" Text="LOGIN"></asp:Label>
+  <div class="titulo" align="center" id="titulo">
+     <asp:Label ID="Titulo" runat="server" Text="LOGIN" Font-Bold="True" Font-Size="XX-Large"></asp:Label>
+      <br />
+      <br />
     </div>
     <div class="labels">
 
@@ -34,7 +39,6 @@
         <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredValidatorPassword" runat="server" ControlToValidate="Password" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegExprValid2" runat="server" ErrorMessage="Password incorrecto" ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" ControlToValidate="Password" ForeColor="Red"></asp:RegularExpressionValidator>
-
         <br />
 
         <br />

@@ -5,6 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Gestión de Tareas Alumno</title>
     <style type="text/css">
+        body{
+             font-family: Georgia, 'Times New Roman', Times, serif;
+        }
         ul {
             list-style-type: none;
             margin: 0;

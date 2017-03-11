@@ -32,6 +32,15 @@ Partial Public Class CambiarContraseña
     Protected WithEvents LabelTitulo As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control btnVolverInicio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnVolverInicio As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control LabelEmail.
     '''</summary>
     '''<remarks>
@@ -228,15 +237,6 @@ Partial Public Class CambiarContraseña
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnCambiarContraseña As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control btnVolverInicio.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnVolverInicio As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control LabelCambio.

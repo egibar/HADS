@@ -6,6 +6,9 @@
 <head runat="server">
      <title>Registro</title>
     <style type="text/css">
+        body{
+             font-family: Georgia, 'Times New Roman', Times, serif;
+        }
         #form1 {
             height: 923px;
             margin-left: 0px;

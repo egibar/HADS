@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Confirmar Registro</title>
+     <style type="text/css">
+         body{
+             font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+     </style>
 </head>
 <body>
     <form id="form1" runat="server">

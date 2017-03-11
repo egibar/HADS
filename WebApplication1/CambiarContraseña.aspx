@@ -6,6 +6,9 @@
 <head runat="server">
      <title>Cambiar Contraseña</title>
      <style type="text/css">
+         body{
+             font-family: Georgia, 'Times New Roman', Times, serif;
+        }
          #form1 {
              height: 939px;
          }
@@ -13,13 +16,19 @@
 </head>
 <body style="height: 985px">
     <form id="form1" runat="server">
-    <div>
+    <div style="height: 30px">
     
         <asp:Label ID="LabelTitulo" runat="server" Text="CAMBIAR CONTRASEÑA" Font-Bold="True" Font-Names="Arial"></asp:Label>
         <br />
+
         <br />
     
     </div>
+         <div style="height: 43px;" align="right">
+        <asp:Button ID="btnVolverInicio" runat="server" CausesValidation="False"  Text="Volver a inicio" />
+
+        </div>
+        <br />
          <br />
          <asp:Label ID="LabelEmail" runat="server" Text="Introduce Email"></asp:Label><br />
 
@@ -79,7 +88,6 @@
         <br />
         <br />
         <asp:Button ID="btnCambiarContraseña" runat="server" Text="Cambiar Contraseña" Visible="False" Width="139px" />
-        <asp:Button ID="btnVolverInicio" runat="server" CausesValidation="False" Text="Volver a inicio" />
 
         <br />
         <br />

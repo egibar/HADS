@@ -7,6 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
+        body{
+             font-family: Georgia, 'Times New Roman', Times, serif;
+        }
         #form1 {
             height: 833px;
         }

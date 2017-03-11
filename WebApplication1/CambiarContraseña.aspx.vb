@@ -22,10 +22,10 @@ Public Class CambiarContraseña
         conectarDB()
     End Sub
 
-
     Protected Sub Comprobar_Click(sender As Object, e As EventArgs) Handles Comprobar.Click
         Dim email As String = TextBoxEmail.Text
         usuario = getUsuario(TextBoxEmail.Text)
+        Comprobar.Visible = False
         Try
             If usuario.HasRows() Then
                 usuario.Read()
@@ -59,6 +59,7 @@ Public Class CambiarContraseña
 
         usuario = getUsuario(email)
         usuario.Read()
+        btnComprobar2.Visible = False
 
         If resp = usuario.Item("respuesta") Then
             NuevoPass.Visible = True
@@ -77,6 +78,7 @@ Public Class CambiarContraseña
 
     Protected Sub btnCambiarContraseña_Click(sender As Object, e As EventArgs) Handles btnCambiarContraseña.Click
 
+        btnCambiarContraseña.Visible = False
         Dim respu As String = cambiarPassword(TextBoxEmail.Text, TextBoxPassword.Text)
         If respu = CONFIRMADO Then
             LabelCambio.Visible = True

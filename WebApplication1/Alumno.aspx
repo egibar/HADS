@@ -7,6 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Gestión de Tareas Alumno</title>
     <style type="text/css">
+        body{
+             font-family: Georgia, 'Times New Roman', Times, serif;
+        }
         ul {
             list-style-type: none;
             margin: 0;
@@ -45,12 +48,14 @@
           <!--<li><a href=''>Tareas Propias</a></li>
           <li><a href=''>Grupos</a></li>-->
       </ul>
-    <div style="height: 577px; width: 870px;float:right; margin-left: 7px;" id="divRight">
-            <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
-            </br>
-            </br>
-            <p>Gestión Web de Tareas-Dedicación</p>
-            <p>Alumnos</p>
+    <div style="height: 577px; width: 955px; float:right; margin-left: 7px;" id="divRight">
+        <div align="right" style="height: 44px">
+             <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
+        </div>
+        </br>
+        </br>
+        <p>Gestión Web de Tareas-Dedicación</p>
+        <p>Alumnos</p>
      </div>
    
     </form>
