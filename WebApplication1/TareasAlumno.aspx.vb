@@ -72,8 +72,8 @@ Public Class TareasAlumno
         Dim codigoTarea As String
 
         codigoTarea = GridView1Tareas.SelectedRow.Cells(1).Text
-        ' Response.Redirect("InstanciarTarea.aspx?codigo=" & codigoTarea & "")
-        Response.Redirect("InstanciarTarea.aspx?codigo=" & Me.GridView1Tareas.SelectedRow.Cells(1).Text)
+        Response.Redirect("InstanciarTarea.aspx?codigo=Lab4")
+        'Response.Redirect("InstanciarTarea.aspx?codigo=" & Me.GridView1Tareas.SelectedRow.Cells(1).Text)
 
     End Sub
 
