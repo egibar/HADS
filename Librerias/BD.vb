@@ -116,5 +116,13 @@ Public Class BD
         Return (comando.ExecuteReader())
     End Function
 
+
+
+    Public Shared Function asignaturas() As SqlDataReader
+        Dim st = "Select codigo From Asignaturas"
+        comando = New SqlCommand(st, conexion)
+        Return (comando.ExecuteReader())
+    End Function
+
 End Class
 

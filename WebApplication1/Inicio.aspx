@@ -38,8 +38,9 @@
         <asp:Label ID="LabelPassword" runat="server" Text="Password"></asp:Label><br />
         <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredValidatorPassword" runat="server" ControlToValidate="Password" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegExprValid2" runat="server" ErrorMessage="Password incorrecto" ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" ControlToValidate="Password" ForeColor="Red"></asp:RegularExpressionValidator>
-        <br />
+                    <!--<asp:RegularExpressionValidator ID="RegExprValid2" runat="server" ErrorMessage="Password incorrecto" ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" ControlToValidate="Password" ForeColor="Red"></asp:RegularExpressionValidator>
+       -->
+                         <br />
 
         <br />
 
