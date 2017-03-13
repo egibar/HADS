@@ -18,25 +18,24 @@ Public Class TareasAlumno
             alumno = Session("email")
 
             conectarDB()
-            Dim p As SqlDataReader
-            p = asignaturas()
-                While p.Read() = True
-                    DDList1Asig.Items.Add(p.Item("codigo"))
+            'Dim p As SqlDataReader
+            'p = asignaturas()
+            'While p.Read() = True
+            'DDList1Asig.Items.Add(p.Item("codigo"))
 
-                End While
-                Session.Add("Asig", DDList1Asig.SelectedValue)
-                p.Close()
+            'End While
+            'Session.Add("Asig", DDList1Asig.SelectedValue)
+            'p.Close()
 
 
-                'dapAlmns = New SqlDataAdapter("SELECT GruposClase.codigoasig FROM GruposClase INNER JOIN EstudiantesGrupo ON EstudiantesGrupo.Grupo=GruposClase.codigo WHERE EstudiantesGrupo.email='" & alumno & "'", getconexion())
-                '   dapAlmns = New SqlDataAdapter("select GruposClase.codigoasig from GruposClase, EstudiantesGrupo where EstudiantesGrupo.Grupo=GruposClase.codigo and EstudiantesGrupo.email='" & alumno & "'", getconexion())
+            'dapAlmns = New SqlDataAdapter("SELECT GruposClase.codigoasig FROM GruposClase INNER JOIN EstudiantesGrupo ON EstudiantesGrupo.Grupo=GruposClase.codigo WHERE EstudiantesGrupo.email='" & alumno & "'", getconexion())
+            dapAlmns = New SqlDataAdapter("select GruposClase.codigoasig from GruposClase, EstudiantesGrupo where EstudiantesGrupo.Grupo=GruposClase.codigo and EstudiantesGrupo.email='" & alumno & "'", getconexion())
 
-                '   dapAlmns.Fill(dstAlmns, "AsignaturasAlumno")
-
-                '   DDList1Asig.DataSource = dstAlmns.Tables("AsignaturasAlumno")
-                '   DDList1Asig.DataTextField = "codigoasig"
-                '   DDList1Asig.DataBind()
-            End If
+            dapAlmns.Fill(dstAlmns, "AsignaturasAlumno")
+            DDList1Asig.DataSource = dstAlmns.Tables("AsignaturasAlumno")
+            DDList1Asig.DataTextField = "codigoasig"
+            DDList1Asig.DataBind()
+        End If
     End Sub
     Protected Sub Page_Unload(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Unload
         cerrarconexionDB()
