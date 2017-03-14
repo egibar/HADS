@@ -43,7 +43,7 @@
 
       <ul>
           <li><a href=''>Asignaturas</a></li>
-          <li><a href=''>Tareas</a></li>
+          <li><a href='TareasProfesor.aspx'>Tareas</a></li>
           <li><a href=''>Grupos</a></li>
           <li><a href=''>Importar v.XMLDocument</a></li>
           <li><a href='TareasAlumno.aspx'>Exportar</a></li>
