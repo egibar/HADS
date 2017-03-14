@@ -19,6 +19,7 @@
             </p>
     <p>Tu registro se ha completado con exito, ya puede loguearse sin problemas. Para volver pulse el boton.</p>
            <asp:Button ID="btnVolverInicio" runat="server" CausesValidation="False" Text="Volver a inicio" />
+            <br />
     </div>
         <div id="divInformativo" style="height: 284px">
             <asp:Label ID="Label1Informativo" runat="server" Visible="False"></asp:Label>

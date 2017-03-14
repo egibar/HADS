@@ -31,8 +31,6 @@ Public Class BD
         conexion.Close()
     End Sub
 
-   ' Public Shared Function insertarUsuario(ByVal email As String, ByVal nombre As String, ByVal apellidos As String, ByVal pregunta As String, ByVal respuesta As String, ByVal DNI As String, ByVal numconfir As Integer, ByVal confirmado As Boolean, ByVal grupo As String, ByVal tipo As String, ByVal pass As String) As String
-    'Dim st = "insert into Usuarios (email,nombre,apellidos,pregunta,respuesta,dni,numconfir,confirmado,grupo,tipo,pass) values ('" & email & "','" & nombre & "','" & apellidos & "','" & pregunta & "','" & respuesta & "','" & DNI & "','" & numconfir & "','" & confirmado & "','" & grupo & "','" & tipo & "','" & pass & " ')"
     Public Shared Function insertarUsuario(ByVal email As String, ByVal nombre As String, ByVal pregunta As String, ByVal respuesta As String, ByVal DNI As String, ByVal numconfir As Integer, ByVal confirmado As Boolean, ByVal grupo As String, ByVal tipo As String, ByVal pass As String) As String
         Dim st = "insert into Usuarios (email,nombre,pregunta,respuesta,dni,confirmado,pass) values ('" & email & "','" & nombre & "','" & pregunta & "','" & respuesta & "','" & DNI & "','" & confirmado & "','" & pass & " ')"
         Dim numregs As Integer
@@ -60,7 +58,7 @@ Public Class BD
 
     Public Shared Function login(ByVal email As String, ByVal pass As String) As SqlDataReader
         'Dim st = "select count(*) from Usuarios where email ='" & email & "' and pass='" & pass & "' and confirmado = 1"
-        Dim st = "select tipo from Usuarios where email ='" & email & "' and pass='" & pass & "' and confirmado = 1"
+        Dim st = "select tipo from Usuarios where email ='" & email & "' and pass='" & pass & "' and confirmado = 'true'"
         comando = New SqlCommand(st, conexion)
         'cuando haya algún usuario que coincida
         Try
@@ -78,7 +76,7 @@ Public Class BD
 
     Public Shared Function ActivarUsuario(ByVal email As String, numeroconfirmacion As Integer) As String
         'Dim st = "update Usuarios set confirmado=True Where (email='" & email & "'and numconfir= '" & numeroconfirmacion & "' and confirmado=False)"
-        Dim st = "update Usuarios set confirmado=True Where (email='" & email & "' and confirmado=False)"
+        Dim st = "update Usuarios set confirmado='True' Where (email='" & email & "' and confirmado='False')"
 
         Dim numregs As Integer
         comando = New SqlCommand(st, conexion)

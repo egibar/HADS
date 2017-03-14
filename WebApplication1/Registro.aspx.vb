@@ -20,7 +20,7 @@ Public Class Registro
             NumConf = CLng(Rnd() * 9000000) + 1000000
 
             Dim resp As String
-            resp = BD.insertarUsuario(Email.Text, Nombre.Text, Pregunta.Text, Respuesta.Text, DNI.Text, NumConf, 0, vbNullString, vbNullString, Password.Text)
+            resp = BD.insertarUsuario(Email.Text, Nombre.Text, Pregunta.Text, Respuesta.Text, DNI.Text, NumConf, False, vbNullString, vbNullString, Password.Text)
             If (resp = BD.INSERTADO) Then
                 If (mail(NumConf, Email.Text)) Then
                     Label1Info.ForeColor = Drawing.Color.Green
