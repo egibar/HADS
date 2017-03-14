@@ -77,7 +77,9 @@ Public Class BD
     End Function
 
     Public Shared Function ActivarUsuario(ByVal email As String, numeroconfirmacion As Integer) As String
-        Dim st = "update Usuarios set confirmado=1 Where (email='" & email & "'and numconfir= '" & numeroconfirmacion & "' and confirmado=0)"
+        'Dim st = "update Usuarios set confirmado=True Where (email='" & email & "'and numconfir= '" & numeroconfirmacion & "' and confirmado=False)"
+        Dim st = "update Usuarios set confirmado=True Where (email='" & email & "' and confirmado=False)"
+
         Dim numregs As Integer
         comando = New SqlCommand(st, conexion)
         Try
