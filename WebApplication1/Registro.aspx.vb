@@ -37,7 +37,7 @@ Public Class Registro
     Protected Function mail(ByVal num As Integer, ByVal address As String) As Boolean
 
         Dim subject As String = "Confirmacion de registro"
-        Dim url As String = "http://hads19hads.azurewebsites.net/ConfirmarRegistro.aspx?mail=" + address + "&cod=" + num.ToString
+        Dim url As String = "http://hads191617.azurewebsites.net/ConfirmarRegistro.aspx?mail=" + address + "&cod=" + num.ToString
         ' Dim url As String = "http://localhost:35845/ConfirmarRegistro.aspx?mail=" + address + "&cod=" + num.ToString
 
         Dim texto As String = "Bienvenido a nuestra pagina, pulsa en el siguiente enlace para confirmar el registro" +
