@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="InsertarTarea.aspx" />
+    <Content Include="VerEstadisticas.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -185,6 +186,13 @@
     </Compile>
     <Compile Include="TareasProfesor.aspx.vb">
       <DependentUpon>TareasProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VerEstadisticas.aspx.designer.vb">
+      <DependentUpon>VerEstadisticas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerEstadisticas.aspx.vb">
+      <DependentUpon>VerEstadisticas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

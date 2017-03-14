@@ -42,6 +42,7 @@
     <form id="form1" runat="server">
 
       <ul>
+          <li><a href='VerEstadisticas.aspx'>Estadisticas</a></li>
           <li><a href=''>Asignaturas</a></li>
           <li><a href='TareasProfesor.aspx'>Tareas</a></li>
           <li><a href=''>Grupos</a></li>
