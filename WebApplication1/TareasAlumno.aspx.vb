@@ -5,6 +5,7 @@ Imports System.Data.SqlClient
 Public Class TareasAlumno
     Inherits System.Web.UI.Page
 
+    Dim table As New DataTable
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If (IsPostBack) Then
@@ -18,17 +19,6 @@ Public Class TareasAlumno
             alumno = Session("email")
 
             conectarDB()
-            'Dim p As SqlDataReader
-            'p = asignaturas()
-            'While p.Read() = True
-            'DDList1Asig.Items.Add(p.Item("codigo"))
-
-            'End While
-            'Session.Add("Asig", DDList1Asig.SelectedValue)
-            'p.Close()
-
-
-            'dapAlmns = New SqlDataAdapter("SELECT GruposClase.codigoasig FROM GruposClase INNER JOIN EstudiantesGrupo ON EstudiantesGrupo.Grupo=GruposClase.codigo WHERE EstudiantesGrupo.email='" & alumno & "'", getconexion())
             dapAlmns = New SqlDataAdapter("select GruposClase.codigoasig from GruposClase, EstudiantesGrupo where EstudiantesGrupo.Grupo=GruposClase.codigo and EstudiantesGrupo.email='" & alumno & "'", getconexion())
 
             dapAlmns.Fill(dstAlmns, "AsignaturasAlumno")
@@ -57,10 +47,11 @@ Public Class TareasAlumno
         alumno = Session("email")
         asigSelected = DDList1Asig.SelectedItem.Text
 
-        dapTarea = New SqlDataAdapter("select TareasGenericas.Codigo, TareasGenericas.Descripcion, TareasGenericas.HEstimadas, TareasGenericas.TipoTarea from TareasGenericas where TareasGenericas.codAsig='" & asigSelected & "'", getconexion())
+        dapTarea = New SqlDataAdapter("select TareasGenericas.Codigo, TareasGenericas.Descripcion, TareasGenericas.HEstimadas, TareasGenericas.TipoTarea from TareasGenericas where Explotacion='true' AND TareasGenericas.codAsig='" & asigSelected & "'", getconexion())
         dapTarea.Fill(dstTarea, "TareasAlumno")
         tblTarea = dstTarea.Tables("TareasAlumno")
-       
+        Session("table") = tblTarea
+
         GridView1Tareas.DataSource = tblTarea
         GridView1Tareas.DataBind()
 
@@ -77,6 +68,12 @@ Public Class TareasAlumno
 
     End Sub
 
-
+    Protected Sub GridView_Sorting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewSortEventArgs) Handles GridView1Tareas.Sorting
+        table = Session("table")
+        Dim vista As New DataView(table)
+        vista.Sort = e.SortExpression
+        GridView1Tareas.DataSource = vista
+        GridView1Tareas.DataBind()
+    End Sub
 
 End Class

@@ -9,4 +9,5 @@
         Session.Abandon()
         Response.Redirect("Inicio.aspx")
     End Sub
+
 End Class

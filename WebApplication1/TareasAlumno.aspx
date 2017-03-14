@@ -46,7 +46,8 @@
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1VerTareas" runat="server" Text="Visualizar Tareas" />
      </div>
-&nbsp;<asp:GridView ID="GridView1Tareas" runat="server" Height="267px" Width="554px">
+&nbsp;<asp:GridView ID="GridView1Tareas" AllowSorting="True" runat="server" Height="267px" Width="554px">
+
             <Columns>
                 <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Instanciar" />
             </Columns>
