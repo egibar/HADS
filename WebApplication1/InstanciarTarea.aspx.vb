@@ -7,17 +7,16 @@ Public Class InstanciarTarea
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         Dim Alumno As String
-        Dim CodigoTarea As String
 
         Dim dapTareas As SqlDataAdapter
         Dim dstTareas As New DataSet
         Dim tblTareas As DataTable
 
         Alumno = Session("email")
-        CodigoTarea = Request.QueryString("codigo")
 
         Label1Usuario.Text = Alumno
-        Label2Tarea.Text = codigoTarea
+        Label2Tarea.Text = Request.QueryString("codigo")
+        Label3HEstimadas.Text = Request.QueryString("horasEst")
 
         dapTareas = New SqlDataAdapter("select * from EstudiantesTareas where Email='" & Alumno & "'", getconexion())
         dapTareas.Fill(dstTareas, "TareasEspecificasAlumno")
@@ -42,7 +41,7 @@ Public Class InstanciarTarea
 
         Alumno = Session("email")
         CodigoTarea = Label2Tarea.Text
-        HEstimadas = TextBox1HEstimadas.Text
+        HEstimadas = Label3HEstimadas.Text
         HReales = TextBox1HReales.Text
 
         dapTareas = New SqlDataAdapter("select Email, CodTarea, HEstimadas, HReales from EstudiantesTareas where Email='" & Alumno & "'", getconexion())

@@ -50,22 +50,13 @@ Partial Public Class InstanciarTarea
     Protected WithEvents Label2Tarea As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control TextBox1HEstimadas.
+    '''Control Label3HEstimadas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextBox1HEstimadas As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control RequiredFieldValidator1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents Label3HEstimadas As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control TextBox1HReales.

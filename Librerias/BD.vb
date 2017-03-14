@@ -58,7 +58,7 @@ Public Class BD
 
     Public Shared Function login(ByVal email As String, ByVal pass As String) As SqlDataReader
         'Dim st = "select count(*) from Usuarios where email ='" & email & "' and pass='" & pass & "' and confirmado = 1"
-        Dim st = "select tipo from Usuarios where email ='" & email & "' and pass='" & pass & "' and confirmado = 'true'"
+        Dim st = "select tipo from Usuarios where email ='" & email & "' and pass='" & pass & "' and confirmado = 'True'"
         comando = New SqlCommand(st, conexion)
         'cuando haya algún usuario que coincida
         Try

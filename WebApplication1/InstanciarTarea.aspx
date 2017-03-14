@@ -12,7 +12,7 @@
         }
         #form1 {
             height: 833px;
-            width: 1139px;
+            width: 1239px;
         }
         #divTitulo {
               background-color: #F0F8FF;
@@ -31,23 +31,23 @@
 </head>
 <body style="height: 871px">
     <form id="form1" runat="server">
-    <div id="divTitulo" style="height: 133px; width: 1129px;" title="ALUMNOS">
+    <div id="divTitulo" style="height: 133px; width: 1232px;" title="ALUMNOS">
      <p align="center">ALUMNOS</p>
      <p align="center">INSTANCIAR TAREAS GENÉRICA</p>
          <div align="right">
             <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="30px" Text="Cerrar Sesión" Width="160px" /> 
          </div>
         <br />
-        <div style="height: 575px; width: 444px; float:left;" id="divleft">
+        <div style="height: 575px; width: 471px; float:left;" id="divleft">
             <p align="left" id="Usuario" style="margin-left: 10px; margin-bottom: 16px;">Usuario:&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label1Usuario" runat="server"></asp:Label>
             </p>
             <p align="left" id="Tarea" style="margin-left: 11px; margin-bottom: 16px;">Tarea:&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label2Tarea" runat="server"></asp:Label>
             </p>
-            <p align="left" id="HorasEstimadas" style="margin-left: 10px; margin-bottom: 16px;">Horas Estimadas</p>
-                <asp:TextBox ID="TextBox1HEstimadas" runat="server" Width="200px" style="margin-left: 10px"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1HEstimadas" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+            <p align="left" id="HorasEstimadas" style="margin-left: 10px; margin-bottom: 16px; width: 426px;">Horas Estimadas&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label3HEstimadas" runat="server"></asp:Label>
+            </p>
             <br />
             <p align="left" id="HorasReales" style="margin-left: 10px; margin-bottom: 16px;">Horas Reales</p> 
                 <asp:TextBox ID="TextBox1HReales" runat="server" Width="200px" style="margin-left: 10px"></asp:TextBox>
@@ -72,7 +72,7 @@
                 <asp:HyperLink ID="HLink1Alumnos" runat="server" Font-Names="Arial" Font-Size="Medium" NavigateUrl="~/Alumno.aspx">Página Anterior</asp:HyperLink>
             
         </div>
-        <div style="height: 573px; width: 660px; float:right; margin-left: 17px;" id="divRight">
+        <div style="height: 573px; width: 727px; float:right; margin-left: 27px;" id="divRight">
             <br />
             <br />
             <asp:GridView ID="GridViewTareasAsignatura" runat="server" Height="235px" Width="483px">
