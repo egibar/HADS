@@ -29,12 +29,11 @@
 
 <body>
     <form id="form1" runat="server">
-     <div id="divTitulo" style="height: 141px; margin-top: 9px; margin-left: 7px;" title="ALUMNOS">
-     <p align="center">
-     <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" />
-        
-        </p>
-        <p align="center">PROFESOR</p>
+     <div id="divTitulo" style="height: 128px; margin-top: 9px; margin-left: 7px;" title="ALUMNOS">
+        <div align="right" style="height: 25px">
+             <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
+        </div>
+        <p align="center" style="margin-bottom: 14px">PROFESOR</p>
         <p align="center">GESTIÓN DE TAREAS GENÉRICAS</p>
          <br/>
          <br/>

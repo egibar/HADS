@@ -69,10 +69,9 @@ Public Class TareasAlumno
     Protected Sub GridView1Tareas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridView1Tareas.SelectedIndexChanged
 
         Dim codigoTarea As String
-
-        codigoTarea = GridView1Tareas.SelectedRow.Cells(1).Text
-        Response.Redirect("InstanciarTarea.aspx?codigo=Lab4")
-        'Response.Redirect("InstanciarTarea.aspx?codigo=" & Me.GridView1Tareas.SelectedRow.Cells(1).Text)
+        codigoTarea = Me.GridView1Tareas.SelectedRow.Cells(1).Text
+        'Response.Redirect("InstanciarTarea.aspx?codigo=Lab4")
+        Response.Redirect("InstanciarTarea.aspx?codigo=" & codigoTarea & "")
 
     End Sub
 

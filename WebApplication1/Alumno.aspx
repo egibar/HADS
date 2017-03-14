@@ -53,7 +53,6 @@
              <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
         </div>
         </br>
-        </br>
         <p>Gestión Web de Tareas-Dedicación</p>
         <p>Alumnos</p>
      </div>

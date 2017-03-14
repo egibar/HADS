@@ -68,13 +68,20 @@ Public Class InstanciarTarea
             GridViewTareasAsignatura.DataSource = tblTareas
             GridViewTareasAsignatura.DataBind()
 
+            LabelTareaCreada.Visible = True
             LabelTareaCreada.Text = "Una nueva tarea ha sido creada"
             LabelTareaCreada.ForeColor = Drawing.Color.Green
-            LabelTareaCreada.Visible = True
+
         Catch ex As Exception
+
             LabelTareaCreada.Text = "ERROR.No se ha podido crear una nueva tarea"
             LabelTareaCreada.ForeColor = Drawing.Color.Red
             LabelTareaCreada.Visible = True
         End Try
+    End Sub
+
+    Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
+        Session.Abandon()
+        Response.Redirect("Inicio.aspx")
     End Sub
 End Class
