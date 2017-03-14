@@ -52,7 +52,7 @@
             <asp:Button ID="Button3InsertarTarea" runat="server" Height="36px" Text="Insertar Nueva Tarea" Width="202px" PostBackUrl="~/InsertarTarea.aspx" />
             <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource4" style="margin-top: 85px">
                 <Columns>
-                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:CommandField ShowEditButton="True" />
                     <asp:BoundField DataField="Codigo" HeaderText="Codigo" ReadOnly="True" SortExpression="Codigo" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
                     <asp:BoundField DataField="CodAsig" HeaderText="CodAsig" SortExpression="CodAsig" />
