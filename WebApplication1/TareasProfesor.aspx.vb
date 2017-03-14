@@ -10,4 +10,7 @@
         Response.Redirect("Inicio.aspx")
     End Sub
 
+    Protected Sub Button3InsertarTarea_Click(sender As Object, e As EventArgs) Handles Button3InsertarTarea.Click
+        Response.Redirect("./InsertarTarea.aspx")
+    End Sub
 End Class

@@ -46,19 +46,31 @@
              <asp:TextBox ID="TextBox1Descripcion" runat="server" Height="107px" Width="298px"></asp:TextBox>
          </p>
          <p align:"right" style="width: 150px">Asignatura</p>
-         <asp:DropDownList ID="DDList1Asignatura" runat="server" Width="185px">
+         <asp:DropDownList ID="DDList1Asignatura" runat="server" Width="185px" DataSourceID="SqlDataSource1" DataTextField="codigogrupo" DataValueField="codigogrupo">
          </asp:DropDownList>
          <p align:"right" style="width: 180px">Horas Estimadas</p>
          <asp:TextBox ID="TextBox3TipoTarea" runat="server" Width="169px"></asp:TextBox>
          <p align:"right" style="width: 178px">Tipo de Tareas</p>
          <asp:DropDownList ID="DDList1TipoTareas" runat="server" Width="185px">
+            <asp:ListItem>Examen</asp:ListItem>
+            <asp:ListItem>Trabajo</asp:ListItem>
+            <asp:ListItem>Ejercicio</asp:ListItem>
+            <asp:ListItem>Laboratorio</asp:ListItem>
          </asp:DropDownList>
          <br/>
          <br/>
          <br/>
          <br/>
          <asp:Button ID="Button1AñadirTarea" runat="server" Text="Añadir Tarea" Width="146px" />
+         <br/>
+         <br/>
+         <asp:Label ID="LabelTareaCreada" runat="server" Font-Bold="True" Font-Size="Medium" Visible="False"></asp:Label>
     </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT [codigogrupo] FROM [ProfesoresGrupo] WHERE ([email] = @email)">
+            <SelectParameters>
+                <asp:SessionParameter Name="email" SessionField="email" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </form>
 </body>
 </html>
