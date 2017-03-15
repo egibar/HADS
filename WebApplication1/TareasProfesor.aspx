@@ -52,7 +52,7 @@
             <asp:Button ID="Button3InsertarTarea" runat="server" Height="36px" Text="Insertar Nueva Tarea" Width="202px" PostBackUrl="~/InsertarTarea.aspx" />
             <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource4" style="margin-top: 85px">
                 <Columns>
-                    <asp:CommandField ShowEditButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                     <asp:BoundField DataField="Codigo" HeaderText="Codigo" ReadOnly="True" SortExpression="Codigo" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
                     <asp:BoundField DataField="CodAsig" HeaderText="CodAsig" SortExpression="CodAsig" />
@@ -73,7 +73,27 @@
                     <asp:SessionParameter Name="email" SessionField="email" Type="String" />
                 </SelectParameters>
         </asp:SqlDataSource>
-            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT * FROM [TareasGenericas]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT * FROM [TareasGenericas]" DeleteCommand="DELETE FROM [TareasGenericas] WHERE [Codigo] = @original_Codigo" InsertCommand="INSERT INTO [TareasGenericas] ([Codigo], [Descripcion], [CodAsig], [HEstimadas], [Explotacion], [TipoTarea]) VALUES (@Codigo, @Descripcion, @CodAsig, @HEstimadas, @Explotacion, @TipoTarea)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [TareasGenericas] SET [Descripcion] = @Descripcion, [CodAsig] = @CodAsig, [HEstimadas] = @HEstimadas, [Explotacion] = @Explotacion, [TipoTarea] = @TipoTarea WHERE [Codigo] = @original_Codigo">
+                <DeleteParameters>
+                    <asp:Parameter Name="original_Codigo" Type="String" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="Codigo" Type="String" />
+                    <asp:Parameter Name="Descripcion" Type="String" />
+                    <asp:Parameter Name="CodAsig" Type="String" />
+                    <asp:Parameter Name="HEstimadas" Type="Int32" />
+                    <asp:Parameter Name="Explotacion" Type="Boolean" />
+                    <asp:Parameter Name="TipoTarea" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="Descripcion" Type="String" />
+                    <asp:Parameter Name="CodAsig" Type="String" />
+                    <asp:Parameter Name="HEstimadas" Type="Int32" />
+                    <asp:Parameter Name="Explotacion" Type="Boolean" />
+                    <asp:Parameter Name="TipoTarea" Type="String" />
+                    <asp:Parameter Name="original_Codigo" Type="String" />
+                </UpdateParameters>
+        </asp:SqlDataSource>
             <br />
             <br />
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Profesor.aspx">Volver Atras</asp:HyperLink>
