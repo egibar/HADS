@@ -33,10 +33,9 @@
 <body style="height: 746px">
     <form id="form1" runat="server">
     <div id="divTitulo" style="height: 141px; margin-top: 9px;" title="ALUMNOS">
-     <p align="center">
-     <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" />
-        
-        </p>
+        <div align="center">
+        <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" />
+        </div>
         <p align="center">PROFESOR</p>
         <p align="center">GESTIÓN DE TAREAS GENÉRICAS</p>
         
