@@ -12,10 +12,12 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-            width: 20%;
+            width: 19%;
             background-color: #f1f1f1;
             position: fixed;
             height: 100%;
+            top: 15px;
+            left: 10px;
         }
         li a {
             align-content:center;
@@ -55,8 +57,8 @@
              <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
             </div> 
             </br>
-            <p>Gestión Web de Tareas-Dedicación</p>
-            <p>Profesores</p>
+            <p align="center">Gestión Web de Tareas-Dedicación</p>
+            <p align="center">Profesores</p>
      </div>
    
     </form>

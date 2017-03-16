@@ -26,22 +26,22 @@
             width: 204px;
         }
         #form1 {
-            height: 754px;
+            height: 954px;
         }
       </style>
 </head>
 <body style="height: 746px">
     <form id="form1" runat="server">
     <div id="divTitulo" style="height: 141px; margin-top: 9px;" title="ALUMNOS">
-        <div align="center">
-        <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" />
+        <div align="right" style="height: 33px">
+        <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" />
         </div>
         <p align="center">PROFESOR</p>
         <p align="center">GESTIÓN DE TAREAS GENÉRICAS</p>
         
     </div>
-&nbsp;<div style="margin-left: 18px; width: 1075px; height: 399px;">
-            <br />
+&nbsp;<div style="margin-left: 18px; width: 1075px; height: 522px;">
+        <br />
         <p align="left">
             Seleccionar Asignatura:</p>
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource3" Height="36px" Width="314px" DataTextField="codigogrupo" DataValueField="codigogrupo">
@@ -49,7 +49,13 @@
 
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button3InsertarTarea" runat="server" Height="36px" Text="Insertar Nueva Tarea" Width="202px" PostBackUrl="~/InsertarTarea.aspx" />
-            <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource4" style="margin-top: 85px">
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT [codigogrupo] FROM [ProfesoresGrupo] WHERE ([email] = @email )">
+                <SelectParameters>
+                    <asp:SessionParameter Name="email" SessionField="email" Type="String" />
+                </SelectParameters>
+        </asp:SqlDataSource>
+            <br />
+            <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource4" style="margin-top: 65px" Height="207px" Width="880px">
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                     <asp:BoundField DataField="Codigo" HeaderText="Codigo" ReadOnly="True" SortExpression="Codigo" />
@@ -63,15 +69,6 @@
         </div>
         <br />
         <br />
-        <br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <br />
-            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT [codigogrupo] FROM [ProfesoresGrupo] WHERE ([email] = @email)">
-                <SelectParameters>
-                    <asp:SessionParameter Name="email" SessionField="email" Type="String" />
-                </SelectParameters>
-        </asp:SqlDataSource>
             <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT * FROM [TareasGenericas]" DeleteCommand="DELETE FROM [TareasGenericas] WHERE [Codigo] = @original_Codigo" InsertCommand="INSERT INTO [TareasGenericas] ([Codigo], [Descripcion], [CodAsig], [HEstimadas], [Explotacion], [TipoTarea]) VALUES (@Codigo, @Descripcion, @CodAsig, @HEstimadas, @Explotacion, @TipoTarea)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [TareasGenericas] SET [Descripcion] = @Descripcion, [CodAsig] = @CodAsig, [HEstimadas] = @HEstimadas, [Explotacion] = @Explotacion, [TipoTarea] = @TipoTarea WHERE [Codigo] = @original_Codigo">
                 <DeleteParameters>
                     <asp:Parameter Name="original_Codigo" Type="String" />
@@ -93,9 +90,15 @@
                     <asp:Parameter Name="original_Codigo" Type="String" />
                 </UpdateParameters>
         </asp:SqlDataSource>
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
             <br />
             <br />
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Profesor.aspx">Volver Atras</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Profesor.aspx">Menú Profesor</asp:HyperLink>
             <br />
             <br />
 
