@@ -16,7 +16,7 @@
         </asp:Panel>
     </div>
         Escoje la asignatura<br />
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource3" Height="36px" Width="314px" DataTextField="codigogrupo" DataValueField="codigogrupo">
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" Height="36px" Width="314px" DataTextField="codigo" DataValueField="codigo">
         </asp:DropDownList>
         <br /><br /><br />
                    <br />
@@ -30,6 +30,7 @@
                     
                 </div>
     </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT [codigo] FROM [Asignaturas]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

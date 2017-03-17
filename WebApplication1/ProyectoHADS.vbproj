@@ -86,6 +86,7 @@
     <Content Include="App_Data\HAS.xml" />
     <Content Include="App_Data\SEG.xml" />
     <Content Include="App_Data\XSLTFile.xsl" />
+    <Content Include="ImportarTareas.aspx" />
     <Content Include="InsertarTarea.aspx" />
     <Content Include="VerEstadisticas.aspx" />
     <Content Include="Web.config">
@@ -102,6 +103,13 @@
     <Content Include="TareasProfesor.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImportarTareas.aspx.designer.vb">
+      <DependentUpon>ImportarTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarTareas.aspx.vb">
+      <DependentUpon>ImportarTareas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="InsertarTarea.aspx.designer.vb">
       <DependentUpon>InsertarTarea.aspx</DependentUpon>
     </Compile>
