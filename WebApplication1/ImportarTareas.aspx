@@ -15,6 +15,8 @@
             <h1>IMPORTAR TAREAS GENERICAS</h1>
         </asp:Panel>
     </div>
+               <div style="margin-left:40px">
+
         Escoje la asignatura<br />
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" Height="36px" Width="314px" DataTextField="codigo" DataValueField="codigo">
         </asp:DropDownList>
@@ -24,9 +26,10 @@
                    </div>
                    <br />
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/MenuProfesor.aspx" >Volver Atras</asp:HyperLink>
-        <div style="margin-right: 40px;text-align:center">
-                  
+<div style="margin-left: 40px; margin-right: 40px">                  
                     <asp:Xml ID="Xml1" runat="server" TransformSource="~/App_Data/XSLTFile.xsl"></asp:Xml>
+                    
+                    <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/&amp; DropDownList1.SelectedValue &amp; &quot;.xml&quot;"></asp:XmlDataSource>
                     
                 </div>
     </div>

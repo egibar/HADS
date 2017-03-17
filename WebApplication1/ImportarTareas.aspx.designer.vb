@@ -68,6 +68,15 @@ Partial Public Class ImportarTareas
     Protected WithEvents Xml1 As Global.System.Web.UI.WebControls.Xml
     
     '''<summary>
+    '''XmlDataSource1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents XmlDataSource1 As Global.System.Web.UI.WebControls.XmlDataSource
+    
+    '''<summary>
     '''SqlDataSource1 control.
     '''</summary>
     '''<remarks>
