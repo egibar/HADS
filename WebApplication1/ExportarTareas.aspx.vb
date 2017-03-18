@@ -40,4 +40,13 @@ Public Class ExportarTareas
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
 
     End Sub
+
+    Protected Sub AsignaturasProfe_Selecting(sender As Object, e As SqlDataSourceSelectingEventArgs)
+
+    End Sub
+
+    Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
+        Session.Abandon()
+        Response.Redirect("Inicio.aspx")
+    End Sub
 End Class

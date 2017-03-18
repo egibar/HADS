@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class TareasProfesor
+Partial Public Class TareasProfesor2
 
     '''<summary>
     '''Control form1.
@@ -59,13 +59,13 @@ Partial Public Class TareasProfesor
     Protected WithEvents Button3InsertarTarea As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control AsignaturaProfe.
+    '''Control AsigProfe.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents AsignaturaProfe As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents AsigProfe As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
     '''Control GridView1.
@@ -77,13 +77,13 @@ Partial Public Class TareasProfesor
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control InfoTareas.
+    '''Control TareasAsignatura.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents InfoTareas As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents TareasAsignatura As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
     '''Control HyperLink1.

@@ -89,6 +89,7 @@
     <Content Include="ExportarTareas.aspx" />
     <Content Include="ImportarTareas.aspx" />
     <Content Include="InsertarTarea.aspx" />
+    <Content Include="TareasProfesor.aspx" />
     <Content Include="VerEstadisticas.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -101,7 +102,6 @@
     <Content Include="Alumno.aspx" />
     <Content Include="InstanciarTarea.aspx" />
     <Content Include="Profesor.aspx" />
-    <Content Include="TareasProfesor.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExportarTareas.aspx.designer.vb">

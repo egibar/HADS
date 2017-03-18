@@ -23,8 +23,8 @@
             <h1>EXPORTAR TAREAS GENERICAS</h1>
         </asp:Panel>
       </div>
-      <div style="height: 574px; width: 1223px;">
-      <div style="height: 550px; float:left; width: 514px; margin-top: 7px;" id="divleft">
+      <div style="height: 574px; width: 1248px;">
+      <div style="height: 550px; float:left; width: 431px; margin-top: 7px;" id="divleft">
           <p>Seleccionar Asignatura a Exportar:</p>
 
           <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="AsignaturasProfe" DataTextField="codigoasig" DataValueField="codigoasig" Width="165px" AutoPostBack="True">
@@ -47,7 +47,7 @@
           <br />
 
       </div>
-      <div style="float:right; width: 691px; height: 553px; margin-top: 6px; top: auto;" id="divright">
+      <div style="float:right; width: 800px; height: 553px; margin-top: 6px; top: auto;" id="divright">
 
           <br />
           <br />
