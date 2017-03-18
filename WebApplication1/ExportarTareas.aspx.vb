@@ -36,4 +36,8 @@ Public Class ExportarTareas
         dset.WriteXml(Server.MapPath("App_Data/" & codAsig & "exportar.xml"))
         Label1Exportar.Text = "XML de " & codAsig & " ha sido exportado correctamente"
     End Sub
+
+    Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
+
+    End Sub
 End Class

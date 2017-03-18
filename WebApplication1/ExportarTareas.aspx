@@ -27,7 +27,7 @@
       <div style="height: 550px; float:left; width: 514px; margin-top: 7px;" id="divleft">
           <p>Seleccionar Asignatura a Exportar:</p>
 
-          <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="AsignaturasProfe" DataTextField="codigoasig" DataValueField="codigoasig" Width="165px">
+          <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="AsignaturasProfe" DataTextField="codigoasig" DataValueField="codigoasig" Width="165px" AutoPostBack="True">
           </asp:DropDownList>
           <asp:SqlDataSource ID="AsignaturasProfe" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT codigoasig FROM GruposClase INNER JOIN ProfesoresGrupo ON GruposClase.codigo = ProfesoresGrupo.codigogrupo AND ProfesoresGrupo.email = @email">
               <SelectParameters>

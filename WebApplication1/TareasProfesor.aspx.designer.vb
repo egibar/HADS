@@ -23,6 +23,15 @@ Partial Public Class TareasProfesor
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control Panel1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
     '''Control Button2CerrarSesion.
     '''</summary>
     '''<remarks>
@@ -50,13 +59,13 @@ Partial Public Class TareasProfesor
     Protected WithEvents Button3InsertarTarea As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control SqlDataSource3.
+    '''Control AsignaturaProfe.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents SqlDataSource3 As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents AsignaturaProfe As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
     '''Control GridView1.
@@ -68,13 +77,13 @@ Partial Public Class TareasProfesor
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control SqlDataSource4.
+    '''Control InfoTareas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents SqlDataSource4 As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents InfoTareas As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
     '''Control HyperLink1.
