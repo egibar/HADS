@@ -50,13 +50,13 @@ Partial Public Class ExportarTareas
     Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control SqlDataSource1.
+    '''Control AsignaturasProfe.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents AsignaturasProfe As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
     '''Control ButtonExpXML.
@@ -75,6 +75,15 @@ Partial Public Class ExportarTareas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ButtonExpJSON As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control DatosExportar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DatosExportar As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
     '''Control GridView1.

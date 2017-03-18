@@ -23,15 +23,15 @@
             <h1>EXPORTAR TAREAS GENERICAS</h1>
         </asp:Panel>
       </div>
-      <div style="height: 574px">
-      <div style="height: 550px; float:left; width: 552px; margin-top: 7px;" id="divleft">
+      <div style="height: 574px; width: 1223px;">
+      <div style="height: 550px; float:left; width: 514px; margin-top: 7px;" id="divleft">
           <p>Seleccionar Asignatura a Exportar:</p>
 
-          <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigoasig" DataValueField="codigoasig" Width="165px">
+          <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="AsignaturasProfe" DataTextField="codigoasig" DataValueField="codigoasig" Width="165px">
           </asp:DropDownList>
-          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT codigoasig FROM GruposClase INNER JOIN ProfesoresGrupo ON GruposClase.codigo = ProfesoresGrupo.codigogrupo AND ProfesoresGrupo.email = @email">
+          <asp:SqlDataSource ID="AsignaturasProfe" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT codigoasig FROM GruposClase INNER JOIN ProfesoresGrupo ON GruposClase.codigo = ProfesoresGrupo.codigogrupo AND ProfesoresGrupo.email = @email">
               <SelectParameters>
-                  <asp:SessionParameter Name="email" SessionField="Email" />
+                  <asp:SessionParameter Name="email" SessionField="email" />
               </SelectParameters>
           </asp:SqlDataSource>
           <br />
@@ -47,11 +47,22 @@
           <br />
 
       </div>
-      <div style="float:right; width: 713px; height: 553px; margin-top: 6px; top: auto;" id="divright">
+      <div style="float:right; width: 691px; height: 553px; margin-top: 6px; top: auto;" id="divright">
 
           <br />
           <br />
-          <asp:GridView ID="GridView1" runat="server" Height="257px" Width="660px">
+          <asp:SqlDataSource ID="DatosExportar" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT [Codigo], [Descripcion], [HEstimadas], [Explotacion] FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)">
+              <SelectParameters>
+                  <asp:ControlParameter ControlID="DropDownList1" DefaultValue="SelectedValue" Name="CodAsig" PropertyName="SelectedValue" />
+              </SelectParameters>
+          </asp:SqlDataSource>
+          <asp:GridView ID="GridView1" runat="server" Height="250px" Width="618px" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="DatosExportar">
+              <Columns>
+                  <asp:BoundField DataField="Codigo" HeaderText="Codigo" ReadOnly="True" SortExpression="Codigo" />
+                  <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                  <asp:BoundField DataField="HEstimadas" HeaderText="HEstimadas" SortExpression="HEstimadas" />
+                  <asp:CheckBoxField DataField="Explotacion" HeaderText="Explotacion" SortExpression="Explotacion" />
+              </Columns>
           </asp:GridView>
 
       </div>

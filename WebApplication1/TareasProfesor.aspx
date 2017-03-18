@@ -32,13 +32,12 @@
 </head>
 <body style="height: 746px">
     <form id="form1" runat="server">
-    <div id="divTitulo" style="height: 141px; margin-top: 9px;" title="ALUMNOS">
+    <div id="divTitulo" style="height: 168px; margin-top: 9px;" align="center" title="ALUMNOS">
         <div align="right" style="height: 33px">
         <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" />
         </div>
-        <p align="center">PROFESOR</p>
-        <p align="center">GESTIÓN DE TAREAS GENÉRICAS</p>
-        
+        <h1>PROFESOR</h1>
+        <h1>GESTIÓN DE TAREAS GENÉRICAS</h1>       
     </div>
 &nbsp;<div style="margin-left: 18px; width: 1075px; height: 522px;">
         <br />
@@ -49,7 +48,7 @@
 
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button3InsertarTarea" runat="server" Height="36px" Text="Insertar Nueva Tarea" Width="202px" PostBackUrl="~/InsertarTarea.aspx" />
-            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT [codigogrupo] FROM [ProfesoresGrupo] WHERE ([email] = @email )">
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT codigoasig FROM GruposClase INNER JOIN ProfesoresGrupo ON GruposClase.codigo = ProfesoresGrupo.codigogrupo AND ProfesoresGrupo.email = @email">
                 <SelectParameters>
                     <asp:SessionParameter Name="email" SessionField="email" Type="String" />
                 </SelectParameters>
