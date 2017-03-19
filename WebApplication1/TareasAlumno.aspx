@@ -35,7 +35,9 @@
     <div id="divTitulo" style="height: 125px" title="ALUMNOS">
      <p align="center">ALUMNOS</p>
      <p align="center">GESTIÓN DE TAREAS GENÉRICAS</p>
-     <asp:Button ID="ButtonCerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" />
+     <div align="right" style="height: 33px">
+                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" />
+     </div>
         
     </div>
     <div id="divcontenido" style="height: 238px">

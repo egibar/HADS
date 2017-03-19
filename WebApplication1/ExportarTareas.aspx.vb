@@ -17,11 +17,7 @@ Public Class ExportarTareas
 
     Protected Sub Cargar_Datos()
 
-        Dim email As String
-
         Try
-            email = Session("email")
-
             adapt = New SqlDataAdapter("select Codigo, Descripcion, Hestimadas, Explotacion, TipoTarea from TareasGenericas where CodAsig='" & DropDownList1.SelectedValue & "'", getconexion())
 
             'asignar un nombre al dataset (nodo raiz del XML)
@@ -37,6 +33,7 @@ Public Class ExportarTareas
             'asiganar a grid y mostrar
             GridView1.DataSource = tbl
             GridView1.DataBind()
+
         Catch ex As Exception
             'mostramos errores
             Label1Exportar.Text = ex.Message
@@ -61,11 +58,13 @@ Public Class ExportarTareas
             '-EL NOMBRE DE LA TABLA ES EL NOMBRE DE CADA ELEMENTO <tarea>
             '-EL NOMBRE DE LOS CAMPOS ES EL ASIGNADO EL NOMBRE QUE TENGA LA COLUMNA EN EL DATASET
 
-            dset.WriteXml(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
+            'dset.WriteXml(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
+            dset.WriteXml(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & "exp.xml"))
 
             'crear el documento XML y cargar el fichero en el documento
             Dim xmldoc As New XmlDocument
-            xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
+            xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & "exp.xml"))
+            'xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             'crear lista de nodos y cojer todos los nodos con tag=<tareas>
             Dim tareas As XmlNodeList
@@ -77,9 +76,11 @@ Public Class ExportarTareas
             tareas(0).Attributes.Append(attr)
 
             'guardar en el xml
-            xmldoc.Save(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
+            xmldoc.Save(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & "exp.xml"))
+            'xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
-            Label1Exportar.Text = "XML de " & DropDownList1.SelectedValue & ".xml ha sido exportado correctamente"
+            Label1Exportar.ForeColor = Drawing.Color.Green
+            Label1Exportar.Text = "XML de " & DropDownList1.SelectedValue & "exp.xml ha sido exportado correctamente"
             Label1Exportar.Visible = True
 
         Catch ex As Exception
@@ -103,4 +104,12 @@ Public Class ExportarTareas
         Cargar_Datos()
 
     End Sub
+
+    ' Protected Sub GridView1_Sorting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewSortEventArgs) Handles GridView1.Sorting
+    '    tbl = Session("tbl")
+    'Dim vista As New DataView(tbl)
+    '   vista.Sort = e.SortExpression
+    '  GridView1.DataSource = vista
+    ' GridView1.DataBind()
+    'End Sub
 End Class

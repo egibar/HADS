@@ -58,7 +58,7 @@
      </div>
      <div style="height: 109px">
           
-         <asp:Label ID="Label1Exportar" runat="server" Visible="False"></asp:Label>
+         <asp:Label ID="Label1Exportar" runat="server" Visible="False" Font-Bold="True" Font-Size="Large"></asp:Label>
          <br />
          <br />
          <br />

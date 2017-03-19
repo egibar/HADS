@@ -31,11 +31,6 @@ Public Class TareasAlumno
         cerrarconexionDB()
     End Sub
 
-    Protected Sub ButtonCerrarSesion_Click(sender As Object, e As EventArgs) Handles ButtonCerrarSesion.Click
-        Session.Abandon()
-        Response.Redirect("Inicio.aspx")
-    End Sub
-
     Protected Sub Button1VerTareas_Click(sender As Object, e As EventArgs) Handles Button1VerTareas.Click
 
         Dim dapTarea As New SqlDataAdapter
@@ -76,4 +71,8 @@ Public Class TareasAlumno
         GridView1Tareas.DataBind()
     End Sub
 
+    Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
+        Session.Abandon()
+        Response.Redirect("Inicio.aspx")
+    End Sub
 End Class
