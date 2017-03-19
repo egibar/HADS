@@ -23,8 +23,8 @@
             <h1>EXPORTAR TAREAS GENERICAS</h1>
         </asp:Panel>
       </div>
-      <div style="height: 574px; width: 1248px;">
-      <div style="height: 550px; float:left; width: 431px; margin-top: 7px;" id="divleft">
+      <div style="height: 411px; width: 1248px;">
+      <div style="height: 400px; float:left; width: 430px; margin-top: 7px;" id="divleft">
           <p>Seleccionar Asignatura a Exportar:</p>
 
           <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="AsignaturasProfe" DataTextField="codigoasig" DataValueField="codigoasig" Width="165px" AutoPostBack="True">
@@ -47,22 +47,11 @@
           <br />
 
       </div>
-      <div style="float:right; width: 800px; height: 553px; margin-top: 6px; top: auto;" id="divright">
+      <div style="float:right; width: 800px; height: 400px; margin-top: 6px; top: auto;" id="divright">
 
           <br />
           <br />
-          <asp:SqlDataSource ID="DatosExportar" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT [Codigo], [Descripcion], [HEstimadas], [Explotacion] FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)">
-              <SelectParameters>
-                  <asp:ControlParameter ControlID="DropDownList1" DefaultValue="SelectedValue" Name="CodAsig" PropertyName="SelectedValue" />
-              </SelectParameters>
-          </asp:SqlDataSource>
-          <asp:GridView ID="GridView1" runat="server" Height="250px" Width="618px" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="DatosExportar">
-              <Columns>
-                  <asp:BoundField DataField="Codigo" HeaderText="Codigo" ReadOnly="True" SortExpression="Codigo" />
-                  <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                  <asp:BoundField DataField="HEstimadas" HeaderText="HEstimadas" SortExpression="HEstimadas" />
-                  <asp:CheckBoxField DataField="Explotacion" HeaderText="Explotacion" SortExpression="Explotacion" />
-              </Columns>
+          <asp:GridView ID="GridView1" runat="server" Height="250px" Width="618px" AutoGenerateColumns="False">
           </asp:GridView>
 
       </div>

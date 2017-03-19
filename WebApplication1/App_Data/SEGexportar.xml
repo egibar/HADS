@@ -1,17 +1,17 @@
 <?xml version="1.0" standalone="yes"?>
 <tareas>
-  <tareas>
+  <tarea>
     <Codigo>SEG08-Test12</Codigo>
     <Descripcion>Test 12 de la asignatura</Descripcion>
     <Hestimadas>3</Hestimadas>
     <Explotacion>false</Explotacion>
     <TipoTarea>Examen</TipoTarea>
-  </tareas>
-  <tareas>
+  </tarea>
+  <tarea>
     <Codigo>SEG08-Trabajo20</Codigo>
     <Descripcion>Tareas del trabajo 20 de la asignatura</Descripcion>
     <Hestimadas>10</Hestimadas>
     <Explotacion>false</Explotacion>
     <TipoTarea>Trabajo</TipoTarea>
-  </tareas>
+  </tarea>
 </tareas>
