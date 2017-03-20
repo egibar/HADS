@@ -59,11 +59,11 @@ Public Class ExportarTareas
             '-EL NOMBRE DE LOS CAMPOS ES EL ASIGNADO EL NOMBRE QUE TENGA LA COLUMNA EN EL DATASET
 
             'dset.WriteXml(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
-            dset.WriteXml(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & "exp.xml"))
+            dset.WriteXml(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             'crear el documento XML y cargar el fichero en el documento
             Dim xmldoc As New XmlDocument
-            xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & "exp.xml"))
+            xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
             'xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             'crear lista de nodos y cojer todos los nodos con tag=<tareas>
@@ -76,7 +76,7 @@ Public Class ExportarTareas
             tareas(0).Attributes.Append(attr)
 
             'guardar en el xml
-            xmldoc.Save(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & "exp.xml"))
+            xmldoc.Save(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
             'xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             Label1Exportar.ForeColor = Drawing.Color.Green

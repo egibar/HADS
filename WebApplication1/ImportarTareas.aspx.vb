@@ -9,11 +9,11 @@ Public Class ImportarTareas
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ' Xml1.DocumentSource = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
-        'Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl")
+        Xml1.DocumentSource = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
         conectarDB()
         Dim xd As New XmlDocument
         xd.Load(Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml"))
+        Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl")
         Dim Tareas As XmlNodeList
         Tareas = xd.GetElementsByTagName("tarea")
         Dim table As New DataTable

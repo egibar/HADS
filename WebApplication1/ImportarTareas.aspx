@@ -18,14 +18,14 @@
                <div style="margin-left:40px">
 
         Escoje la asignatura<br />
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" Height="36px" Width="314px" DataTextField="codigo" DataValueField="codigo">
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" Height="36px" Width="314px" DataTextField="codigoasig" DataValueField="codigoasig">
         </asp:DropDownList>
         <br /><br /><br />
                    <br />
          <asp:Button ID="Button1" runat="server" Text="Importar Tareas" Height="52px" Width="231px" />
                    </div>
                    <br />
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/MenuProfesor.aspx" >Volver Atras</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor.aspx" >Volver Atras</asp:HyperLink>
 <div style="margin-left: 40px; margin-right: 40px">                  
                     <asp:Xml ID="Xml1" runat="server" TransformSource="~/App_Data/XSLTFile.xsl"></asp:Xml>
                     
@@ -33,7 +33,11 @@
                     
                 </div>
     </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT [codigo] FROM [Asignaturas]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT codigoasig FROM GruposClase INNER JOIN ProfesoresGrupo ON GruposClase.codigo = ProfesoresGrupo.codigogrupo AND ProfesoresGrupo.email = @email">
+            <SelectParameters>
+                  <asp:SessionParameter Name="email" SessionField="email" />
+              </SelectParameters>
+          </asp:SqlDataSource>
     </form>
 </body>
 </html>
