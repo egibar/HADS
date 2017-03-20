@@ -27,7 +27,6 @@ Public Class ExportarTareas
             adapt.Fill(dset, "tarea")
             tbl = dset.Tables("tarea")
 
-
             'guardar el dataset en la sesión para poder recuperarlo más tarde
             Session("dataset") = dset
 
@@ -59,13 +58,12 @@ Public Class ExportarTareas
             '-EL NOMBRE DE LA TABLA ES EL NOMBRE DE CADA ELEMENTO <tarea>
             '-EL NOMBRE DE LOS CAMPOS ES EL ASIGNADO EL NOMBRE QUE TENGA LA COLUMNA EN EL DATASET
 
-            'dset.WriteXml(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
             dset.WriteXml(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             'crear el documento XML y cargar el fichero en el documento
             Dim xmldoc As New XmlDocument
             xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
-            'xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
+
 
             'crear lista de nodos y cojer todos los nodos con tag=<tareas>
             Dim tareas As XmlNodeList
@@ -105,12 +103,4 @@ Public Class ExportarTareas
         Cargar_Datos()
 
     End Sub
-
-    ' Protected Sub GridView1_Sorting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewSortEventArgs) Handles GridView1.Sorting
-    '    tbl = Session("tbl")
-    'Dim vista As New DataView(tbl)
-    '   vista.Sort = e.SortExpression
-    '  GridView1.DataSource = vista
-    ' GridView1.DataBind()
-    'End Sub
 End Class

@@ -48,11 +48,11 @@
           <li><a href=''>Asignaturas</a></li>
           <li><a href='TareasProfesor.aspx'>Tareas</a></li>
           <li><a href=''>Grupos</a></li>
-          <li><a href='ImportarTareas.aspx'>Importar v.XMLDocument</a></li>
+          <li><a href='ImportarTareasXMLDocument.aspx'>Importar v.XMLDocument</a></li>
+          <li><a href='ImportarTareasDataSet.aspx'>Importar v.DataSet</a></li>
           <li><a href='ExportarTareas.aspx'>Exportar</a></li>
-          <li><a href=''>Importar v.DataSet</a></li>
       </ul>
-    <div style="height: 577px; width: 963px; float:right; margin-left: 7px;" id="divRight">
+    <div style="height: 577px; width: 991px; float:right; margin-left: 7px;" id="divRight">
             <div align="right" style="height: 25px">
              <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
             </div> 

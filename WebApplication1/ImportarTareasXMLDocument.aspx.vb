@@ -28,7 +28,6 @@ Public Class ImportarTareas
 
         Xml1.Document = xd
 
-
         'RECORREMOS LA LISTA DE NODOS Y AÑADIMOS A LA BD LOS REGISTROS
         Dim i As Integer
         For i = 0 To Tareas.Count - 1
@@ -44,5 +43,10 @@ Public Class ImportarTareas
         Next
 
         cerrarconexionDB()
+    End Sub
+
+    Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
+        Session.Abandon()
+        Response.Redirect("Inicio.aspx")
     End Sub
 End Class

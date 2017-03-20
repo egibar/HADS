@@ -38,7 +38,7 @@
          <asp:Button ID="Button1" runat="server" Text="Importar Tareas" Height="52px" Width="231px" />
                    </div>
                    <br />
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor.aspx" >Volver Atras</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor.aspx" >Volver a Menú Profesor</asp:HyperLink>
 <div style="margin-left: 40px; margin-right: 40px">                  
                     <asp:Xml ID="Xml1" runat="server" TransformSource="~/App_Data/XSLTFile.xsl"></asp:Xml>
                     
