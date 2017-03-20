@@ -82,6 +82,12 @@ Public Class ExportarTareas
             Label1Exportar.Text = "XML de " & DropDownList1.SelectedValue & "exp.xml ha sido exportado correctamente"
             Label1Exportar.Visible = True
 
+            Xml1.DocumentSource = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
+            Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl")
+            Xml1.Document = xmldoc
+
+
+
         Catch ex As Exception
             Label1Exportar.Text = ex.Message
         End Try
