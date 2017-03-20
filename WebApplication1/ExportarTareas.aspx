@@ -51,11 +51,9 @@
 
           <br />
           <br />
-          <asp:GridView ID="GridView1" runat="server" Height="250px" Width="618px" AutoGenerateColumns="False">
-          </asp:GridView>
+          <asp:GridView ID="GridView1" runat="server">
+</asp:GridView>
 
-                    <asp:Xml ID="Xml1" runat="server" TransformSource="~/App_Data/XSLTFile.xsl"></asp:Xml>
-                    
       </div>
      </div>
      <div style="height: 109px">

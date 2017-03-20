@@ -79,14 +79,8 @@ Public Class ExportarTareas
             'xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             Label1Exportar.ForeColor = Drawing.Color.Green
-            Label1Exportar.Text = "XML de " & DropDownList1.SelectedValue & "exp.xml ha sido exportado correctamente"
+            Label1Exportar.Text = "XML de " & DropDownList1.SelectedValue & ".xml ha sido exportado correctamente"
             Label1Exportar.Visible = True
-
-            Xml1.DocumentSource = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
-            Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl")
-            Xml1.Document = xmldoc
-
-
 
         Catch ex As Exception
             Label1Exportar.Text = ex.Message
@@ -103,10 +97,21 @@ Public Class ExportarTareas
     End Sub
 
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
-        Label1Exportar.Visible = False
+        ' Label1Exportar.Visible = False
         Label1Exportar.Text = ""
 
         Cargar_Datos()
+
+    End Sub
+
+    Private Sub DropDownList1_DataBound(sender As Object, e As EventArgs) Handles DropDownList1.DataBound
+
+        'SELECCIONAMOS EL PRIMER EJERCICIO
+        'DropDownList1.SelectedValue = DropDownList1.Items.Item(0).Value
+
+        'OBLIGATORIO PARA QUE LA PRIMERA VEZ QUE SE CARGA FUNCIONE
+        Cargar_Datos()
+
 
     End Sub
 End Class

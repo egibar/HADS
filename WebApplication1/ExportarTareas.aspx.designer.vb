@@ -86,15 +86,6 @@ Partial Public Class ExportarTareas
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
-    '''Xml1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Xml1 As Global.System.Web.UI.WebControls.Xml
-    
-    '''<summary>
     '''Label1Exportar control.
     '''</summary>
     '''<remarks>
