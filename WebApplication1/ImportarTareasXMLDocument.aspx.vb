@@ -9,6 +9,7 @@ Public Class ImportarTareas
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         Xml1.DocumentSource = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
         conectarDB()
         Dim xd As New XmlDocument
@@ -40,8 +41,6 @@ Public Class ImportarTareas
             row("TipoTarea") = Tareas(i).ChildNodes(4).ChildNodes(0).Value
 
             table.Rows.Add(row)
-
-
         Next
 
         cerrarconexionDB()

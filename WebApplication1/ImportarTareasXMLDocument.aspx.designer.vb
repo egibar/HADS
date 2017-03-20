@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ExportarTareas
+Partial Public Class ImportarTareas
 
     '''<summary>
     '''Control form1.
@@ -23,13 +23,13 @@ Partial Public Class ExportarTareas
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control Panel1.
+    '''Control Panel2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents Panel2 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''Control Button2CerrarSesion.
@@ -50,49 +50,22 @@ Partial Public Class ExportarTareas
     Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control AsignaturasProfe.
+    '''Control SqlDataSource1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents AsignaturasProfe As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''Control ButtonExpXML.
+    '''Control Button1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ButtonExpXML As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control ButtonExpJSON.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ButtonExpJSON As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control GridView1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
-    '''Control Label1Exportar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Label1Exportar As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control HyperLink1.
@@ -102,4 +75,22 @@ Partial Public Class ExportarTareas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents HyperLink1 As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''Control Xml1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Xml1 As Global.System.Web.UI.WebControls.Xml
+
+    '''<summary>
+    '''Control XmlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents XmlDataSource1 As Global.System.Web.UI.WebControls.XmlDataSource
 End Class

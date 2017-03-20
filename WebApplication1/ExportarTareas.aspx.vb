@@ -27,6 +27,7 @@ Public Class ExportarTareas
             adapt.Fill(dset, "tarea")
             tbl = dset.Tables("tarea")
 
+
             'guardar el dataset en la sesión para poder recuperarlo más tarde
             Session("dataset") = dset
 
