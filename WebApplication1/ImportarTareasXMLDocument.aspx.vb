@@ -41,7 +41,8 @@ Public Class ImportarTareas
 
             tabla.Rows.Add(row)
         Next
-
+        adapt.Update(dset, "tareas")
+        tabla.AcceptChanges()
         cerrarconexionDB()
     End Sub
 
