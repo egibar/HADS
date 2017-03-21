@@ -14,9 +14,9 @@
 </head>
 <body style="height: 527px">
     <form id="form1" runat="server">
-    <div style="height: 63px">
-        <h1>MIS TAREAS</h1>
-    </div>
+    <div align="right" style="height: 25px">
+       <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
+    </div> 
     <div style="height: 437px">
         <br />
         <asp:Xml ID="XmlHASoriginal" runat="server" DocumentSource="~/App_Data/HAS.xml" TransformSource="~/App_Data/XSLTFile.xsl"></asp:Xml>

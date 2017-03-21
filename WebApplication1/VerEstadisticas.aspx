@@ -8,12 +8,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
+    <div>    
         <asp:DropDownList ID="DDList1Asig" runat="server" Height="36px" Width="314px" DataSourceID="SqlDataSource1" DataTextField="email" DataValueField="email">
         </asp:DropDownList>
-    
-    
         </div>
     <div>
     

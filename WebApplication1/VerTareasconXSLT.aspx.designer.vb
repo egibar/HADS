@@ -23,6 +23,15 @@ Partial Public Class VerTareasconXLST
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control Button2CerrarSesion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Button2CerrarSesion As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control XmlHASoriginal.
     '''</summary>
     '''<remarks>

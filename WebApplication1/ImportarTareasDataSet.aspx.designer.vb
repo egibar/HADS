@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ImportartareasDataSet
+Partial Public Class ImportarTareasDataSet1
 
     '''<summary>
     '''Control form1.
@@ -59,6 +59,15 @@ Partial Public Class ImportartareasDataSet
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
+    '''Control lblMensaje.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMensaje As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control Button1.
     '''</summary>
     '''<remarks>
@@ -68,6 +77,15 @@ Partial Public Class ImportartareasDataSet
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control GridViewDatos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridViewDatos As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
     '''Control Xml1.
     '''</summary>
     '''<remarks>
@@ -75,15 +93,6 @@ Partial Public Class ImportartareasDataSet
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Xml1 As Global.System.Web.UI.WebControls.Xml
-
-    '''<summary>
-    '''Control GridView1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
     '''Control Label1Importar.

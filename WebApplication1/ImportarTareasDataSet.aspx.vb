@@ -1,8 +1,9 @@
 ﻿Imports Librerias.BD
 Imports System.Data.SqlClient
 Imports System.Xml
+Imports System.IO
 
-Public Class ImportartareasDataSet
+Public Class ImportarTareasDataSet1
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -12,7 +13,7 @@ Public Class ImportartareasDataSet
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'cargar en el XML DATASOURCE el XML
         Xml1.DocumentSource = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
-        conectarDB()
+
         Try
             'crear documento y cargar el fichero en el documento
             Dim xmldoc As New XmlDocument
@@ -43,7 +44,7 @@ Public Class ImportartareasDataSet
             Dim fila As DataRow
             For Each fila In dsetXML.Tables(0).Rows
                 'COMANDO PARA DEBUGEAR Y VER QUE EFECTIVAMENTE LEE LOS ITEMS
-                '  Debug.Print(fila.Item("Codigo"))
+                Debug.Print(fila.Item("Codigo"))
                 'añadir CodAsig a cada fila
                 fila.Item("CodAsig") = DropDownList1.SelectedValue
             Next
@@ -52,19 +53,30 @@ Public Class ImportartareasDataSet
             adapt.Update(dsetXML.Tables(0))
             tabla.AcceptChanges()
 
-            Label1Importar.Text = "Ha sido importado correctamente"
+            Label1Importar.Text = "Se ha importado correctamente"
             Label1Importar.Visible = True
 
         Catch ex As Exception
             Label1Importar.Text = ex.Message
         End Try
 
-        cerrarconexionDB()
-
     End Sub
 
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
         Session.Abandon()
         Response.Redirect("Inicio.aspx")
+    End Sub
+
+    Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged, DropDownList1.DataBound
+        'CARGAMOS EN EL XML DATASOURCE EL XML
+        Dim filepath As String = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
+        If (File.Exists(filepath)) Then
+            Xml1.DocumentSource = filepath
+            Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl")
+            lblMensaje.Visible = False
+        Else
+            lblMensaje.Text = "No existe el XML de la asignatura seleccionada"
+            lblMensaje.Visible = True
+        End If
     End Sub
 End Class

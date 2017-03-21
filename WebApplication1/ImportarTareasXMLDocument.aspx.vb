@@ -17,21 +17,21 @@ Public Class ImportarTareas
         Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl")
         Dim Tareas As XmlNodeList
         Tareas = xd.GetElementsByTagName("tarea")
-        Dim table As New DataTable
+        Dim tabla As New DataTable
         Dim dset As New DataSet
-        Dim adapterr As New SqlDataAdapter
+        Dim adapt As New SqlDataAdapter
         Dim comando As New SqlCommand("SELECT * FROM TareasGenericas", getconexion())
-        adapterr = New SqlDataAdapter(comando)
-        Dim builder As New SqlCommandBuilder(adapterr)
-        adapterr.Fill(dset, "tareas")
-        table = dset.Tables("tareas")
+        adapt = New SqlDataAdapter(comando)
+        Dim builder As New SqlCommandBuilder(adapt)
+        adapt.Fill(dset, "tareas")
+        tabla = dset.Tables("tareas")
 
         Xml1.Document = xd
 
         'RECORREMOS LA LISTA DE NODOS Y AÑADIMOS A LA BD LOS REGISTROS
         Dim i As Integer
         For i = 0 To Tareas.Count - 1
-            Dim row As DataRow = table.NewRow()
+            Dim row As DataRow = tabla.NewRow()
             row("Codigo") = Tareas(i).ChildNodes(0).ChildNodes(0).Value
             row("Descripcion") = Tareas(i).ChildNodes(1).ChildNodes(0).Value
             row("CodAsig") = DropDownList1.SelectedValue
@@ -39,7 +39,7 @@ Public Class ImportarTareas
             row("Explotacion") = Tareas(i).ChildNodes(3).ChildNodes(0).Value
             row("TipoTarea") = Tareas(i).ChildNodes(4).ChildNodes(0).Value
 
-            table.Rows.Add(row)
+            tabla.Rows.Add(row)
         Next
 
         cerrarconexionDB()
