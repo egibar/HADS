@@ -16,7 +16,6 @@ Public Class ExportarTareas
     End Sub
 
     Protected Sub Cargar_Datos()
-
         Try
             adapt = New SqlDataAdapter("select Codigo, Descripcion, Hestimadas, Explotacion, TipoTarea from TareasGenericas where CodAsig='" & DropDownList1.SelectedValue & "'", getconexion())
 
@@ -64,7 +63,6 @@ Public Class ExportarTareas
             Dim xmldoc As New XmlDocument
             xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
-
             'crear lista de nodos y cojer todos los nodos con tag=<tareas>
             Dim tareas As XmlNodeList
             tareas = xmldoc.GetElementsByTagName("tareas")
@@ -76,7 +74,6 @@ Public Class ExportarTareas
 
             'guardar en el xml
             xmldoc.Save(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
-            'xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             Label1Exportar.ForeColor = Drawing.Color.Green
             Label1Exportar.Text = "XML de " & DropDownList1.SelectedValue & ".xml ha sido exportado correctamente"
@@ -87,31 +84,19 @@ Public Class ExportarTareas
         End Try
     End Sub
 
-    Protected Sub AsignaturasProfe_Selecting(sender As Object, e As SqlDataSourceSelectingEventArgs)
-
-    End Sub
-
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
         Session.Abandon()
         Response.Redirect("Inicio.aspx")
     End Sub
 
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
-        ' Label1Exportar.Visible = False
         Label1Exportar.Text = ""
-
         Cargar_Datos()
-
     End Sub
 
     Private Sub DropDownList1_DataBound(sender As Object, e As EventArgs) Handles DropDownList1.DataBound
 
-        'SELECCIONAMOS EL PRIMER EJERCICIO
-        'DropDownList1.SelectedValue = DropDownList1.Items.Item(0).Value
-
-        'OBLIGATORIO PARA QUE LA PRIMERA VEZ QUE SE CARGA FUNCIONE
+        'para que funcione al cargar por primera vez 
         Cargar_Datos()
-
-
     End Sub
 End Class

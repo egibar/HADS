@@ -92,6 +92,7 @@
     <Content Include="InsertarTarea.aspx" />
     <Content Include="TareasProfesor.aspx" />
     <Content Include="VerEstadisticas.aspx" />
+    <Content Include="VerTareasconXSLT.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -103,6 +104,9 @@
     <Content Include="Alumno.aspx" />
     <Content Include="InstanciarTarea.aspx" />
     <Content Include="Profesor.aspx" />
+    <Content Include="App_Data\XSLTCodigo.xsl" />
+    <Content Include="App_Data\XSLTDescripcion.xsl" />
+    <Content Include="App_Data\XSLTHEstimadas.xsl" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExportarTareas.aspx.designer.vb">
@@ -220,6 +224,13 @@
     </Compile>
     <Compile Include="VerEstadisticas.aspx.vb">
       <DependentUpon>VerEstadisticas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VerTareasconXSLT.aspx.designer.vb">
+      <DependentUpon>VerTareasconXSLT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerTareasconXSLT.aspx.vb">
+      <DependentUpon>VerTareasconXSLT.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
