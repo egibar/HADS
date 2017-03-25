@@ -21,9 +21,11 @@ Public Class Inicio
             Session("email") = Email.Text
             tipo = usuario.Item("tipo")
             If tipo = "P" Then
-                Response.Redirect("Profesor.aspx")
+                System.Web.Security.FormsAuthentication.SetAuthCookie("profesor", False)
+                Response.Redirect("Profesor/Profesor.aspx")
             Else
-                Response.Redirect("Alumno.aspx")
+                System.Web.Security.FormsAuthentication.SetAuthCookie("alumno", False)
+                Response.Redirect("Alumnos/Alumno.aspx")
             End If
             usuario.Close()
         Else
