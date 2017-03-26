@@ -60,7 +60,7 @@ Public Class BD
         'Dim st = "select count(*) from Usuarios where email ='" & email & "' and pass='" & pass & "' and confirmado = 1"
         Dim st = "select tipo from Usuarios where email ='" & email & "' and pass='" & pass & "' and confirmado = 'True'"
         comando = New SqlCommand(st, conexion)
-        'cuando haya algún usuario que coincida
+        
         Try
             Return comando.ExecuteReader()
         Catch ex As Exception
@@ -80,11 +80,11 @@ Public Class BD
 
         Dim numregs As Integer
         comando = New SqlCommand(st, conexion)
-        Try
-            numregs = comando.ExecuteNonQuery()
-        Catch ex As Exception
-            Return ex.Message
-        End Try
+        'Try
+        numregs = comando.ExecuteNonQuery()
+        ' Catch ex As Exception
+        'Return ex.Message
+        'End Try
         If numregs = 1 Then
             Return CONFIRMADO
         Else
@@ -97,11 +97,11 @@ Public Class BD
         Dim numregs As Integer
         comando = New SqlCommand(st, conexion)
 
-        Try
-            numregs = comando.ExecuteNonQuery()
-        Catch ex As Exception
-            Return ex.Message
-        End Try
+        ' Try
+        numregs = comando.ExecuteNonQuery()
+        'Catch ex As Exception
+        'Return ex.Message
+        'End Try
         If numregs = 1 Then
             Return CONFIRMADO
         Else
@@ -115,8 +115,6 @@ Public Class BD
         comando = New SqlCommand(st, conexion)
         Return (comando.ExecuteReader())
     End Function
-
-
 
     Public Shared Function asignaturas() As SqlDataReader
         Dim st = "Select codigo From Asignaturas"

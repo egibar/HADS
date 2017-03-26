@@ -10,11 +10,11 @@
              font-family: Georgia, 'Times New Roman', Times, serif;
         }
          #form1 {
-             height: 939px;
+             height: 1062px;
          }
      </style>
 </head>
-<body style="height: 985px">
+<body style="height: 1096px">
     <form id="form1" runat="server">
     <div style="height: 30px">
     
@@ -28,7 +28,6 @@
         <asp:Button ID="btnVolverInicio" runat="server" CausesValidation="False"  Text="Volver a inicio" />
 
         </div>
-        <br />
          <br />
          <asp:Label ID="LabelEmail" runat="server" Text="Introduce Email"></asp:Label><br />
 
@@ -94,6 +93,11 @@
         <br />
         <br />
         <asp:Label ID="LabelCambio" runat="server" Visible="False" ForeColor="Green"></asp:Label>
+
+        <br />
+        <br />
+        <br />
+        <asp:HyperLink ID="HyperLinkPagAnterior" runat="server" NavigateUrl="~/Inicio.aspx">Volver a la página anterior</asp:HyperLink>
 
     </form>
 </body>

@@ -92,7 +92,7 @@
     <Content Include="Profesor\InsertarTarea.aspx" />
     <Content Include="Profesor\TareasProfesor.aspx" />
     <Content Include="VerEstadisticas.aspx" />
-    <Content Include="VerTareasconXSLT.aspx" />
+    <Content Include="Profesor\VerTareasconXSLT.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -226,10 +226,10 @@
       <DependentUpon>VerEstadisticas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="VerTareasconXSLT.aspx.designer.vb">
+    <Compile Include="Profesor\VerTareasconXSLT.aspx.designer.vb">
       <DependentUpon>VerTareasconXSLT.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VerTareasconXSLT.aspx.vb">
+    <Compile Include="Profesor\VerTareasconXSLT.aspx.vb">
       <DependentUpon>VerTareasconXSLT.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>

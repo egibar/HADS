@@ -10,7 +10,7 @@ Public Class ConfirmarRegistro
         resp = ActivarUsuario(correo, codigo)
         If resp = CONFIRMADO Then
             Usuario.Text = correo
-        Else
+        ElseIf resp = NOCONFIRMADO Then
             Label1Informativo.Visible = True
             Label1Informativo.Text = "Error al confirmar su registro"
         End If

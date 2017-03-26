@@ -1,6 +1,7 @@
 ﻿Imports Librerias.BD
-
 Imports System.Data.SqlClient
+Imports Librerias.Seguridad
+Imports System.Security.Cryptography
 
 Public Class CambiarContraseña
     Inherits System.Web.UI.Page
@@ -23,9 +24,11 @@ Public Class CambiarContraseña
     End Sub
 
     Protected Sub Comprobar_Click(sender As Object, e As EventArgs) Handles Comprobar.Click
+
         Dim email As String = TextBoxEmail.Text
         usuario = getUsuario(TextBoxEmail.Text)
         Comprobar.Visible = False
+
         Try
             If usuario.HasRows() Then
                 usuario.Read()
@@ -68,7 +71,7 @@ Public Class CambiarContraseña
             TextBoxPassword2.Visible = True
             btnCambiarContraseña.Visible = True
             RequiredValidatorPassword2.Visible = True
-            RequiredValidatorPassword2.Visible = True
+            'RequiredValidatorPassword2.Visible = True
         Else
             LabelRespCorrecta.Visible = True
             LabelRespCorrecta.Text = "Esa no es la respuesta correcta a la pregunta."
@@ -79,11 +82,14 @@ Public Class CambiarContraseña
     Protected Sub btnCambiarContraseña_Click(sender As Object, e As EventArgs) Handles btnCambiarContraseña.Click
 
         btnCambiarContraseña.Visible = False
-        Dim respu As String = cambiarPassword(TextBoxEmail.Text, TextBoxPassword.Text)
+        Dim md5Hash As MD5 = MD5.Create()
+        Dim passCifrada As String = getMd5Hash(md5Hash, TextBoxPassword.Text)
+
+        Dim respu As String = cambiarPassword(TextBoxEmail.Text, passCifrada)
         If respu = CONFIRMADO Then
             LabelCambio.Visible = True
             LabelCambio.Text = "Contraseña cambiada corretamente"
-        Else
+        ElseIf respu = NOCONFIRMADO Then
             LabelCambio.Visible = True
             LabelCambio.Text = "Error al cambiar la contraseña"
         End If

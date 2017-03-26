@@ -12,7 +12,6 @@ Public Class ExportarTareas
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Cargar_Datos()
-
     End Sub
 
     Protected Sub Cargar_Datos()
@@ -86,7 +85,6 @@ Public Class ExportarTareas
 
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
         Session.Abandon()
-        Response.Redirect("Inicio.aspx")
     End Sub
 
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged

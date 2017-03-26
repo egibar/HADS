@@ -17,7 +17,7 @@
       <div id="divTitulo" align="center" style="height: 195px" >
         <asp:Panel ID="Panel1" runat="server" BackColor="Silver" Height="187px">
             <div align="right" style="height: 33px">
-                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" />
+                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
             </div>
             <h1>PROFESOR</h1>
             <h1>GESTIÓN DE TAREAS GENÉRICAS</h1>
@@ -67,7 +67,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Profesor.aspx">Menú Profesor</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Profesor.aspx">Volver al Menú Profesor</asp:HyperLink>
     </div>
     </form>
 </body>

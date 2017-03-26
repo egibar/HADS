@@ -26,19 +26,19 @@
             width: 204px;
         }
         #form1 {
-            height: 796px;
+            height: 861px;
         }
       </style>
 </head>
-<body style="height: 749px">
+<body style="height: 891px">
     <form id="form1" runat="server">
-    <div id="divTitulo" style="height: 125px" title="ALUMNOS">
-     <p align="center">ALUMNOS</p>
-     <p align="center">GESTIÓN DE TAREAS GENÉRICAS</p>
-     <div align="right" style="height: 33px">
-                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" />
-     </div>
         
+    <div id="divTitulo" style="height: 125px" title="ALUMNOS">
+      <div align="right" style="height: 33px">
+         <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
+     </div>
+     <p align="center">ALUMNOS</p>
+     <p align="center">GESTIÓN DE TAREAS GENÉRICAS</p>       
     </div>
     <div id="divcontenido" style="height: 238px">
         <p align="left">Seleccionar Asignatura (sólo se muestran aquellas en las que está matriculado)</p>
@@ -54,6 +54,12 @@
                 <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Instanciar" />
             </Columns>
         </asp:GridView>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Alumnos/Alumno.aspx">Volver al Menú Alumno</asp:HyperLink>
     </form>
     </body>
 </html>

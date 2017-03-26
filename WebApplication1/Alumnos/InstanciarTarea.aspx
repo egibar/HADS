@@ -35,7 +35,7 @@
      <p align="center">ALUMNOS</p>
      <p align="center">INSTANCIAR TAREAS GENÉRICA</p>
          <div align="right">
-            <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="30px" Text="Cerrar Sesión" Width="160px" /> 
+            <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="30px" Text="Cerrar Sesión" Width="160px" PostBackUrl="~/Inicio.aspx" /> 
          </div>
         <br />
         <div style="height: 575px; width: 471px; float:left;" id="divleft">
@@ -69,10 +69,10 @@
             <br/>
             <br/>
             <br/>
-                <asp:HyperLink ID="HLink1Alumnos" runat="server" Font-Names="Arial" Font-Size="Medium" NavigateUrl="~/Alumno.aspx">Página Anterior</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Alumnos/Alumno.aspx">Volver al Menú Alumno</asp:HyperLink>
             
         </div>
-        <div style="height: 573px; width: 727px; float:right; margin-left: 27px;" id="divRight">
+        <div style="height: 573px; width: 741px; float:right; margin-left: 16px;" id="divRight">
             <br />
             <br />
             <asp:GridView ID="GridViewTareasAsignatura" runat="server" Height="235px" Width="483px">

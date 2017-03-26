@@ -67,7 +67,7 @@
         <br />
         <br />
         <br />
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor.aspx">Volver a Menú Profesor</asp:HyperLink>
+         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/Profesor.aspx">Volver a Menú Profesor</asp:HyperLink>
         <br />
     </div>
    </form>
