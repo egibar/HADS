@@ -12,12 +12,12 @@ Public Class ImportarTareasDataSet1
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'cargar en el XML DATASOURCE el XML
-        Xml1.DocumentSource = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
+        Xml1.DocumentSource = Server.MapPath("../App_Data/" & DropDownList1.SelectedValue & ".xml")
 
         Try
             'crear documento y cargar el fichero en el documento
             Dim xmldoc As New XmlDocument
-            xmldoc.Load(Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml"))
+            xmldoc.Load(Server.MapPath("../App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             'crear lista de nodos y cojer los del tag=<tarea>
             Dim listaTareas As XmlNodeList
@@ -35,7 +35,7 @@ Public Class ImportarTareasDataSet1
             Dim dsetXML As New DataSet
 
             'llenar el dataset con contenido del XML
-            dsetXML.ReadXml(Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml"))
+            dsetXML.ReadXml(Server.MapPath("../App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             'columna que falta porque la estructura del fichero XML y la de la tabla no es la misma
             dsetXML.Tables(0).Columns.Add("CodAsig")
@@ -68,10 +68,10 @@ Public Class ImportarTareasDataSet1
 
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged, DropDownList1.DataBound
         'CARGAMOS EN EL XML DATASOURCE EL XML
-        Dim filepath As String = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
+        Dim filepath As String = Server.MapPath("../App_Data/" & DropDownList1.SelectedValue & ".xml")
         If (File.Exists(filepath)) Then
             Xml1.DocumentSource = filepath
-            Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl")
+            Xml1.TransformSource = Server.MapPath("../App_Data/XSLTFile.xsl")
             lblMensaje.Visible = False
         Else
             lblMensaje.Text = "No existe el XML de la asignatura seleccionada"

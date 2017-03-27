@@ -32,11 +32,12 @@
 <body style="height: 871px">
     <form id="form1" runat="server">
     <div id="divTitulo" style="height: 133px; width: 1232px;" title="ALUMNOS">
+        <div align="right" style="height: 33px">
+                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="False" align="right" Font-Names="Arial" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
+        </div>
      <p align="center">ALUMNOS</p>
      <p align="center">INSTANCIAR TAREAS GENÉRICA</p>
-         <div align="right">
-            <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="30px" Text="Cerrar Sesión" Width="160px" PostBackUrl="~/Inicio.aspx" /> 
-         </div>
+         
         <br />
         <div style="height: 575px; width: 471px; float:left;" id="divleft">
             <p align="left" id="Usuario" style="margin-left: 10px; margin-bottom: 16px;">Usuario:&nbsp;&nbsp;&nbsp;&nbsp;

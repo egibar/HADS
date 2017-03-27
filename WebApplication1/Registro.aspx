@@ -84,9 +84,13 @@
        <br />
        <br />
        <br />
-       <div style="height: 109px">
+       <div style="height: 146px">
            <br />
            <asp:Label ID="Label1Info" runat="server" Visible="False"></asp:Label>
+           <br />
+           <br />
+           <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Inicio.aspx" >Volver al Inicio</asp:HyperLink>
        </div>
     
        </div>

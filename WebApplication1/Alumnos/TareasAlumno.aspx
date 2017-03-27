@@ -33,12 +33,12 @@
 <body style="height: 891px">
     <form id="form1" runat="server">
         
-    <div id="divTitulo" style="height: 125px" title="ALUMNOS">
+    <div id="divTitulo" align="center" style="height: 125px" title="ALUMNOS">
       <div align="right" style="height: 33px">
-         <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
-     </div>
-     <p align="center">ALUMNOS</p>
-     <p align="center">GESTIÓN DE TAREAS GENÉRICAS</p>       
+                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="False" align="right" Font-Names="Arial" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
+            </div>
+     <h1>ALUMNOS</h1>
+     <h1>GESTIÓN DE TAREAS GENÉRICAS</h1>       
     </div>
     <div id="divcontenido" style="height: 238px">
         <p align="left">Seleccionar Asignatura (sólo se muestran aquellas en las que está matriculado)</p>

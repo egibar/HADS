@@ -7,11 +7,11 @@
     <title></title>
     <style type="text/css">
         #form1 {
-            height: 543px;
+            height: 691px;
         }
     </style>
 </head>
-<body style="height: 530px">
+<body style="height: 709px">
     <form id="form1" runat="server">
     <div>
         <div align="center" style="height: 174px" >
@@ -23,27 +23,30 @@
             <h1>IMPORTAR TAREAS GENERICAS</h1>
         </asp:Panel>
       </div>
-      <div style="margin-left:40px; height: 231px;">
+      <div style="margin-left:40px; height: 180px; margin-bottom: 0px;">
+          <br />
          Escoje la asignatura<br />
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" Height="36px" Width="314px" DataTextField="codigoasig" DataValueField="codigoasig">
+        <asp:DropDownList ID="DDListAsignaturas" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" Height="36px" Width="314px" DataTextField="codigoasig" DataValueField="codigoasig">
         </asp:DropDownList>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <asp:Button ID="ButtonImportar" runat="server" Text="Importar Tareas" Height="32px" Width="213px" />
         <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT codigoasig FROM GruposClase INNER JOIN ProfesoresGrupo ON GruposClase.codigo = ProfesoresGrupo.codigogrupo AND ProfesoresGrupo.email = @email">
             <SelectParameters>
                   <asp:SessionParameter Name="email" SessionField="email" />
               </SelectParameters>
           </asp:SqlDataSource>
-                   <br /><br />
                    <br />
-         <asp:Button ID="Button1" runat="server" Text="Importar Tareas" Height="52px" Width="231px" />
                    </div>
                    <br />
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor.aspx" >Volver a Menú Profesor</asp:HyperLink>
 <div style="margin-left: 40px; margin-right: 40px">                  
                     <asp:Xml ID="Xml1" runat="server" TransformSource="~/App_Data/XSLTFile.xsl"></asp:Xml>
-                    
                     <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/&amp; DropDownList1.SelectedValue &amp; &quot;.xml&quot;"></asp:XmlDataSource>
-                    
+                    <br />
+                 <asp:Label ID="LabelMensajes" runat="server" Font-Size="Large"></asp:Label>
+                    <br />
+                    <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/Profesor.aspx" Font-Bold="True" >Volver a Menú Profesor</asp:HyperLink>
                 </div>
     </div>
     </form>

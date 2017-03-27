@@ -56,11 +56,11 @@ Public Class ExportarTareas
             '-EL NOMBRE DE LA TABLA ES EL NOMBRE DE CADA ELEMENTO <tarea>
             '-EL NOMBRE DE LOS CAMPOS ES EL ASIGNADO EL NOMBRE QUE TENGA LA COLUMNA EN EL DATASET
 
-            dset.WriteXml(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
+            dset.WriteXml(Server.MapPath("../App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             'crear el documento XML y cargar el fichero en el documento
             Dim xmldoc As New XmlDocument
-            xmldoc.Load(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
+            xmldoc.Load(Server.MapPath("../App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             'crear lista de nodos y cojer todos los nodos con tag=<tareas>
             Dim tareas As XmlNodeList
@@ -72,7 +72,7 @@ Public Class ExportarTareas
             tareas(0).Attributes.Append(attr)
 
             'guardar en el xml
-            xmldoc.Save(Server.MapPath("~/App_Data/" & DropDownList1.SelectedValue & ".xml"))
+            xmldoc.Save(Server.MapPath("../App_Data/" & DropDownList1.SelectedValue & ".xml"))
 
             Label1Exportar.ForeColor = Drawing.Color.Green
             Label1Exportar.Text = "XML de " & DropDownList1.SelectedValue & ".xml ha sido exportado correctamente"
@@ -93,7 +93,6 @@ Public Class ExportarTareas
     End Sub
 
     Private Sub DropDownList1_DataBound(sender As Object, e As EventArgs) Handles DropDownList1.DataBound
-
         'para que funcione al cargar por primera vez 
         Cargar_Datos()
     End Sub

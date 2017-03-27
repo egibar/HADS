@@ -17,14 +17,14 @@
          <div align="center" style="height: 174px" >
         <asp:Panel ID="Panel2" runat="server" BackColor="Silver" Height="166px">
             <div align="right" style="height: 33px">
-                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" align="right" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" />
+               <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
             </div>
             <h1>PROFESOR</h1>
             <h1>IMPORTAR TAREAS GENERICAS</h1>
         </asp:Panel>
       </div>
     <div style="height: 370px;">
-        <div style="margin-left:17px; height: 350px; width: 514px; float:left; margin-bottom: 9px;" >
+        <div style="margin-left:17px; height: 350px; width: 505px; float:left; margin-bottom: 9px;" >
          Escoje la asignatura<br />
             <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" Height="36px" Width="314px" DataTextField="codigoasig" DataValueField="codigoasig">
         </asp:DropDownList>
@@ -63,11 +63,11 @@
     </div>
     <div style="height: 186px">
         <br />
-        <asp:Label ID="Label1Importar" runat="server" Visible="False"></asp:Label>
+        <asp:Label ID="Label1Importar" runat="server" Visible="False" Font-Size="Large"></asp:Label>
         <br />
         <br />
         <br />
-         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/Profesor.aspx">Volver a Menú Profesor</asp:HyperLink>
+         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/Profesor.aspx" Font-Bold="True">Volver a Menú Profesor</asp:HyperLink>
         <br />
     </div>
    </form>

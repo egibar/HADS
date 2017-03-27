@@ -48,13 +48,13 @@
           <!--<li><a href=''>Tareas Propias</a></li>
           <li><a href=''>Grupos</a></li>-->
       </ul>
-    <div style="height: 577px; width: 955px; float:right; margin-left: 7px;" id="divRight">
-        <div align="right" style="height: 44px">
-             <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" /> 
+    <div align="center" style="height: 577px; width: 904px; float:right; margin-left: 7px;" id="divRight">
+        <div align="right" style="height: 33px">
+                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="False" align="right" Font-Names="Arial" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
         </div>
         </br>
-        <p>Gestión Web de Tareas-Dedicación</p>
-        <p>Alumnos</p>
+        <h1>Gestión Web de Tareas-Dedicación</h1>
+        <h1>Alumnos</h1>
      </div>
    
     </form>
