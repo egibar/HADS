@@ -22,6 +22,9 @@
             width: 130px;
             font-weight: 700; margin-left: 760px
         }
+        #h1{
+            font-size:medium;
+        }
         .p{
             margin-top:3px;
             margin-bottom:4px;
@@ -31,30 +34,30 @@
 </head>
 <body style="height: 871px">
     <form id="form1" runat="server">
-    <div id="divTitulo" style="height: 133px; width: 1232px;" title="ALUMNOS">
+    <div id="divTitulo" align="center" style="height: 178px; width: 1232px;" title="ALUMNOS">
         <div align="right" style="height: 33px">
                 <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="False" align="right" Font-Names="Arial" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
         </div>
-     <p align="center">ALUMNOS</p>
-     <p align="center">INSTANCIAR TAREAS GENÉRICA</p>
-         
+     <h1>ALUMNOS</h1>
+     <h1>INSTANCIAR TAREAS GENÉRICA</h1>
+     <div>
         <br />
-        <div style="height: 575px; width: 471px; float:left;" id="divleft">
-            <p align="left" id="Usuario" style="margin-left: 10px; margin-bottom: 16px;">Usuario:&nbsp;&nbsp;&nbsp;&nbsp;
+        <div align="left" style="height: 575px; width: 471px; float:left;" id="divleft">
+            Usuario:&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label1Usuario" runat="server"></asp:Label>
-            </p>
-            <p align="left" id="Tarea" style="margin-left: 11px; margin-bottom: 16px;">Tarea:&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label2Tarea" runat="server"></asp:Label>
-            </p>
-            <p align="left" id="HorasEstimadas" style="margin-left: 10px; margin-bottom: 16px; width: 426px;">Horas Estimadas&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label3HEstimadas" runat="server"></asp:Label>
-            </p>
+          
             <br />
-            <p align="left" id="HorasReales" style="margin-left: 10px; margin-bottom: 16px;">Horas Reales</p> 
+            <br />
+            Tarea:&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label2Tarea" runat="server"></asp:Label>
+            <br />
+            <br />
+            Horas Estimadas&nbsp;&nbsp;&nbsp;<asp:Label ID="Label3HEstimadas" runat="server"></asp:Label>
+            <br />
+            <br />
+            Horas Reales 
                 <asp:TextBox ID="TextBox1HReales" runat="server" Width="200px" style="margin-left: 10px"></asp:TextBox>
-         
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox1HReales" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-         
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox1HReales" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             <br/>
             <br/>
             <br/>
@@ -63,10 +66,8 @@
             <br/>
             <br/>
             <br/>
-
             <asp:Label ID="LabelTareaCreada" runat="server" Font-Bold="True" Font-Size="Medium" Visible="False"></asp:Label>
 
-            <br/>
             <br/>
             <br/>
             <br/>
@@ -76,11 +77,18 @@
         <div style="height: 573px; width: 741px; float:right; margin-left: 16px;" id="divRight">
             <br />
             <br />
-            <asp:GridView ID="GridViewTareasAsignatura" runat="server" Height="235px" Width="483px">
+            <asp:GridView ID="GridViewTareasAsignatura" runat="server" Height="235px" Width="483px" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
+                <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+                <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+                <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+                <RowStyle BackColor="White" ForeColor="#003399" />
+                <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                <SortedAscendingCellStyle BackColor="#EDF6F6" />
+                <SortedAscendingHeaderStyle BackColor="#0D4AC4" />
+                <SortedDescendingCellStyle BackColor="#D6DFDF" />
+                <SortedDescendingHeaderStyle BackColor="#002876" />
             </asp:GridView>
         </div>
-    </div>
-
     </form>
 </body>
 </html>

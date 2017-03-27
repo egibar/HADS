@@ -8,6 +8,9 @@
     <title></title>
 </head>
 <body>
+    <div align="right" style="height: 33px">
+                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="False" align="right" Font-Names="Arial" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
+    </div>
     <form id="form1" runat="server">
     <div>
     BIENVENIDO ADMIN!!

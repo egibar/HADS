@@ -17,12 +17,12 @@ Public Class Inicio
         Dim contraseña As String = Password.Text
 
         'cifrar la contraseña
-        'Dim md5Hash As MD5 = MD5.Create()
-        'Dim passCifrada As String = getMd5Hash(md5Hash, contraseña)
+        Dim md5Hash As MD5 = MD5.Create()
+        Dim passCifrada As String = getMd5Hash(md5Hash, contraseña)
 
         conectarDB()
-        usuario = login(Email.Text, contraseña)
-        'usuario = login(Email.Text, passCifrada)
+        'usuario = login(Email.Text, contraseña)
+        usuario = login(Email.Text, passCifrada)
 
         If usuario.HasRows Then
             usuario.Read()
@@ -36,6 +36,9 @@ Public Class Inicio
                 Session("Rol") = "A"
                 FormsAuthentication.SetAuthCookie("alumno", False)
                 Response.Redirect("~/Alumnos/Alumno.aspx")
+            Else
+                FormsAuthentication.SetAuthCookie("admin", False)
+                Response.Redirect("~/Administrador/Administrador.aspx")
             End If
             usuario.Close()
         Else
