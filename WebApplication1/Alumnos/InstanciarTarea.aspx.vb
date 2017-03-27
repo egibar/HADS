@@ -4,16 +4,13 @@ Imports Librerias.BD
 Public Class InstanciarTarea
     Inherits System.Web.UI.Page
 
+    Dim Alumno As String
+    Dim dapTareas As SqlDataAdapter
+    Dim dstTareas As New DataSet
+    Dim tblTareas As DataTable
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-        Dim Alumno As String
-
-        Dim dapTareas As SqlDataAdapter
-        Dim dstTareas As New DataSet
-        Dim tblTareas As DataTable
-
         Alumno = Session("email")
-
         Label1Usuario.Text = Alumno
         Label2Tarea.Text = Request.QueryString("codigo")
         Label3HEstimadas.Text = Request.QueryString("horasEst")
@@ -29,7 +26,6 @@ Public Class InstanciarTarea
 
     Protected Sub ButtonCrearTarea_Click(sender As Object, e As EventArgs) Handles ButtonCrearTarea.Click
 
-        Dim Alumno As String
         Dim CodigoTarea As String
         Dim HEstimadas As Integer
         Dim HReales As Integer
@@ -68,12 +64,13 @@ Public Class InstanciarTarea
             GridViewTareasAsignatura.DataBind()
 
             LabelTareaCreada.Visible = True
-            LabelTareaCreada.Text = "Una nueva tarea ha sido creada"
             LabelTareaCreada.ForeColor = Drawing.Color.Green
+            LabelTareaCreada.Text = "Una nueva tarea ha sido creada"
+
 
         Catch ex As Exception
 
-            LabelTareaCreada.Text = "ERROR.No se ha podido crear una nueva tarea"
+            LabelTareaCreada.Text = "ERROR.No se ha podido crear una nueva tarea o la tarea ya existe"
             LabelTareaCreada.ForeColor = Drawing.Color.Red
             LabelTareaCreada.Visible = True
         End Try
@@ -81,6 +78,5 @@ Public Class InstanciarTarea
 
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
         Session.Abandon()
-        Response.Redirect("Inicio.aspx")
     End Sub
 End Class

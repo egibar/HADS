@@ -12,7 +12,7 @@
         }
         #form1 {
             height: 833px;
-            width: 1239px;
+            width: 1404px;
         }
         #divTitulo {
               background-color: #F0F8FF;
@@ -34,13 +34,13 @@
 </head>
 <body style="height: 871px">
     <form id="form1" runat="server">
-    <div id="divTitulo" align="center" style="height: 178px; width: 1232px;" title="ALUMNOS">
+    <div id="divTitulo" align="center" style="height: 178px; width: 1397px;" title="ALUMNOS">
         <div align="right" style="height: 33px">
                 <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="False" align="right" Font-Names="Arial" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
         </div>
      <h1>ALUMNOS</h1>
-     <h1>INSTANCIAR TAREAS GENÉRICA</h1>
-     <div>
+     <h1>INSTANCIAR TAREAS GENÉRICAS</h1>
+     </div>
         <br />
         <div align="left" style="height: 575px; width: 471px; float:left;" id="divleft">
             Usuario:&nbsp;&nbsp;&nbsp;&nbsp;
