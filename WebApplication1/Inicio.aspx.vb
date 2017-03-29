@@ -28,7 +28,7 @@ Public Class Inicio
             usuario.Read()
             Session("email") = Email.Text
             tipo = usuario.Item("tipo")
-            If tipo = "P" Then
+            If tipo = "P" And Email.Text <> "vadillo@ehu.es" Then
                 Session("Rol") = "P"
                 FormsAuthentication.SetAuthCookie("profesor", False)
                 Response.Redirect("Profesor/Profesor.aspx")
@@ -36,6 +36,10 @@ Public Class Inicio
                 Session("Rol") = "A"
                 FormsAuthentication.SetAuthCookie("alumno", False)
                 Response.Redirect("Alumnos/Alumno.aspx")
+            ElseIf tipo = "P" And Email.Text = "vadillo@ehu.es" Then
+                Session("Rol") = "P"
+                FormsAuthentication.SetAuthCookie("vadillo@ehu.es", False)
+                Response.Redirect("Profesor/Profesor.aspx")
             Else
                 FormsAuthentication.SetAuthCookie("admin", False)
                 Response.Redirect("Administrador/Administrador.aspx")
