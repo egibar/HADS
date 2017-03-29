@@ -26,21 +26,17 @@ Public Class Inicio
 
         If usuario.HasRows Then
             usuario.Read()
-            MsgBox("ROW")
             Session("email") = Email.Text
             tipo = usuario.Item("tipo")
             If tipo = "P" Then
-                MsgBox("TIPO P")
                 Session("Rol") = "P"
                 FormsAuthentication.SetAuthCookie("profesor", False)
                 Response.Redirect("Profesor/Profesor.aspx")
             ElseIf tipo = "A" Then
-                MsgBox("TIPO A")
                 Session("Rol") = "A"
                 FormsAuthentication.SetAuthCookie("alumno", False)
                 Response.Redirect("Alumnos/Alumno.aspx")
             Else
-                MsgBox("TIPO ??")
                 FormsAuthentication.SetAuthCookie("admin", False)
                 Response.Redirect("Administrador/Administrador.aspx")
             End If
