@@ -41,6 +41,24 @@ Partial Public Class TareasProfesor2
     Protected WithEvents Button2CerrarSesion As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control ScriptManager1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
+    '''Control UpdatePanel1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
     '''Control DropDownList1.
     '''</summary>
     '''<remarks>
@@ -68,15 +86,6 @@ Partial Public Class TareasProfesor2
     Protected WithEvents AsigProfe As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''Control GridView1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
     '''Control TareasAsignatura.
     '''</summary>
     '''<remarks>
@@ -84,6 +93,15 @@ Partial Public Class TareasProfesor2
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents TareasAsignatura As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''Control GridView1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
     '''Control HyperLink1.
