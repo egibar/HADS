@@ -31,6 +31,23 @@ Public Class Global_asax
 
     Sub Session_End(ByVal sender As Object, ByVal e As EventArgs)
         ' Fires when the session ends
+        Application.Lock()
+        Dim s As String
+        Dim a As New ArrayList
+        s = Session("Tipo")
+        If (s.Equals("P")) Then
+            a = Application.Contents("profesores")
+            s = Session("usuario")
+            a.Remove(s)
+            Application.Contents("profesores") = a
+        ElseIf s.Equals("A") Then
+            a = Application.Contents("alumnos")
+            s = Session("usuario")
+            a.Remove(s)
+            Application.Contents("alumnos") = a
+        Else
+        End If
+        Application.UnLock()
     End Sub
 
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)

@@ -8,20 +8,6 @@ Public Class Inicio
     Dim alumnos As List(Of String)
     Dim profesores As List(Of String)
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If (Not Page.IsPostBack) Then
-            Application.Lock()
-            alumnos = Application("alumnos")
-            profesores = Application("profesores")
-            If Session("user") IsNot Nothing Then
-                If Session("tipo") = "A" Then
-                    alumnos.Remove(Session("user"))
-                ElseIf Session("tipo") = "P" Then
-                    profesores.Remove(Session("user"))
-                End If
-            End If
-            Application.UnLock()
-            Session.Abandon()
-        End If
     End Sub
 
     Protected Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
@@ -46,26 +32,26 @@ Public Class Inicio
                 Session("Rol") = "P"
                 'FormsAuthentication.SetAuthCookie("profesor", False)
                 profesores = Application("profesores")
-                If Not profesores.Contains(Session("usuario")) Then
-                    profesores.Add(Session("usuario"))
+                If Not profesores.Contains(Session("email")) Then
+                    profesores.Add(Session("email"))
                 End If
                 If Email.Text = "vadillo@ehu.es" Then
-                    System.Web.Security.FormsAuthentication.SetAuthCookie("vadillo@ehu.es", False)
-                Else
-                    System.Web.Security.FormsAuthentication.SetAuthCookie("profesor", False)
-                End If
+                        System.Web.Security.FormsAuthentication.SetAuthCookie("vadillo@ehu.es", False)
+                    Else
+                        System.Web.Security.FormsAuthentication.SetAuthCookie("profesor", False)
+                    End If
 
-                Response.Redirect("Profesor/Profesor.aspx")
-            ElseIf tipo = "A" Then
-                Session("Rol") = "A"
-                FormsAuthentication.SetAuthCookie("alumno", False)
-                alumnos = Application("alumnos")
-                If Not alumnos.Contains(Session("usuario")) Then
-                    alumnos.Add(Session("usuario"))
-                End If
-                Response.Redirect("Alumnos/Alumno.aspx")
-            Else
-                FormsAuthentication.SetAuthCookie("admin", False)
+                    Response.Redirect("Profesor/Profesor.aspx")
+                ElseIf tipo = "A" Then
+                    Session("Rol") = "A"
+                    FormsAuthentication.SetAuthCookie("alumno", False)
+                    alumnos = Application("alumnos")
+                    If Not alumnos.Contains(Session("email")) Then
+                        alumnos.Add(Session("email"))
+                    End If
+                    Response.Redirect("Alumnos/Alumno.aspx")
+                Else
+                    FormsAuthentication.SetAuthCookie("admin", False)
                 Response.Redirect("Administrador/Administrador.aspx")
             End If
             Application.UnLock()

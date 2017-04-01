@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Profesor.aspx.vb" Inherits="WebApplication1.Profesor" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -60,8 +62,71 @@
             </br>
             <p align="center">Gestión Web de Tareas-Dedicación</p>
             <p align="center">Profesores</p>
-     </div>
-   
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+
+            <ContentTemplate>
+                <asp:Timer ID="Timer1" runat="server" Interval="2000">
+                </asp:Timer>
+
+                &nbsp;<table style="width: 100%">
+                    <tr>
+                        <td style="width: 50%">
+                            <h6>Alumnos(
+                                <asp:Label ID="label_alu" runat="server" Text="0"></asp:Label>
+                                )
+                                    <asp:LinkButton ID="LinkButton1" runat="server">Mostrar/Ocultar</asp:LinkButton>
+                            </h6>
+                            <asp:Panel ID="Panel1" runat="server">
+                                <asp:ListBox ID="ListBox1" runat="server" Width="100%"></asp:ListBox>
+                            </asp:Panel>
+
+                        </td>
+                        <td style="width: 50%">
+                            <h6>Profesores(<asp:Label ID="label_prof" runat="server" Text="0"></asp:Label>
+                                )
+                                    <asp:LinkButton ID="LinkButton2" runat="server">Mostrar/Ocultar</asp:LinkButton>
+                                
+                            </h6>
+                            <asp:Panel ID="Panel2" runat="server">
+                                <asp:ListBox ID="ListBox2" runat="server" Width="100%"></asp:ListBox>
+
+                            </asp:Panel>
+                        </td>
+                    </tr>
+                </table>
+
+
+                
+                <ajaxToolkit:CollapsiblePanelExtender ID="cpe" runat="Server"
+                    TargetControlID="Panel1"
+                    CollapsedSize="0"
+                    ExpandedSize="68"
+                    Collapsed="True"
+                    ExpandControlID="LinkButton1"
+                    CollapseControlID="LinkButton1"
+                    AutoCollapse="False"
+                    AutoExpand="False"
+                    ScrollContents="True"
+                    ExpandDirection="Vertical" />
+                <ajaxToolkit:CollapsiblePanelExtender ID="CollapsiblePanelExtender2" runat="Server"
+                    TargetControlID="Panel2"
+                    CollapsedSize="0"
+                    ExpandedSize="68"
+                    Collapsed="True"
+                    ExpandControlID="LinkButton2"
+                    CollapseControlID="LinkButton2"
+                    AutoCollapse="False"
+                    AutoExpand="False"
+                    ScrollContents="True"
+                    ExpandDirection="Vertical" />
+
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+                 </div>
     </form>
 </body>
 </html>
