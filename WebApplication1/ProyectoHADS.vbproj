@@ -87,6 +87,7 @@
     <Content Include="App_Data\HAS.xml" />
     <Content Include="App_Data\SEG.xml" />
     <Content Include="App_Data\XSLTFile.xsl" />
+    <Content Include="Global.asax" />
     <Content Include="Profesor\ExportarTareas.aspx" />
     <Content Include="Profesor\ImportarTareasDataSet.aspx" />
     <Content Include="Profesor\ImportarTareasXMLDocument.aspx" />
@@ -116,6 +117,9 @@
     <Compile Include="Administrador\Administrador.aspx.vb">
       <DependentUpon>Administrador.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Profesor\ExportarTareas.aspx.designer.vb">
       <DependentUpon>ExportarTareas.aspx</DependentUpon>
