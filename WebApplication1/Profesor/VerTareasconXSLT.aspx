@@ -15,7 +15,7 @@
 <body style="height: 602px">
     <form id="form1" runat="server">
     <div align="right" style="height: 25px">
-       <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" /> 
+       <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
     </div> 
     <div style="height: 557px">
         <br />

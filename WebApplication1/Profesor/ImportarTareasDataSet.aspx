@@ -17,7 +17,7 @@
          <div align="center" style="height: 174px" >
         <asp:Panel ID="Panel2" runat="server" BackColor="Silver" Height="166px">
             <div align="right" style="height: 33px">
-               <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
+               <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" />
             </div>
             <h1>PROFESOR</h1>
             <h1>IMPORTAR TAREAS GENERICAS</h1>

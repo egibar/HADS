@@ -50,7 +50,7 @@
       </ul>
     <div align="center" style="height: 577px; width: 904px; float:right; margin-left: 7px;" id="divRight">
         <div align="right" style="height: 33px">
-                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="False" align="right" Font-Names="Arial" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" />
+                <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="False" align="right" Font-Names="Arial" Font-Size="10pt" ForeColor="White" Height="31px" Text="Cerrar Sesión" Width="164px" />
         </div>
         </br>
         <h1>Gestión Web de Tareas-Dedicación</h1>

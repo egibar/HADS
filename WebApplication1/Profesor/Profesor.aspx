@@ -55,9 +55,9 @@
           <li><a href='ExportarTareas.aspx'>Exportar</a></li>
           <li><a href='VerTareasconXSLT.aspx'>Ver Tareas con XSLT</a></li>
       </ul>
-    <div style="height: 577px; width: 991px; float:right; margin-left: 7px;" id="divRight">
+    <div style="height: 577px; width: 1067px; float:right; margin-left: 7px;" id="divRight">
             <div align="right" style="height: 25px">
-             <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" PostBackUrl="~/Inicio.aspx" /> 
+             <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
             </div> 
             </br>
             <p align="center">Gestión Web de Tareas-Dedicación</p>
@@ -71,21 +71,21 @@
                 <asp:Timer ID="Timer1" runat="server" Interval="2000">
                 </asp:Timer>
 
-                &nbsp;<table style="width: 100%">
+                &nbsp;<table style="width: 100%; height: 220px;">
                     <tr>
                         <td style="width: 50%">
-                            <h6>Alumnos(
+                            <h6 style="font-size: 18px">Alumnos(
                                 <asp:Label ID="label_alu" runat="server" Text="0"></asp:Label>
                                 )
                                     <asp:LinkButton ID="LinkButton1" runat="server">Mostrar/Ocultar</asp:LinkButton>
                             </h6>
                             <asp:Panel ID="Panel1" runat="server">
-                                <asp:ListBox ID="ListBox1" runat="server" Width="100%"></asp:ListBox>
+                                <asp:ListBox ID="ListBox1" runat="server" Width="98%" Height="79px"></asp:ListBox>
                             </asp:Panel>
 
                         </td>
                         <td style="width: 50%">
-                            <h6>Profesores(<asp:Label ID="label_prof" runat="server" Text="0"></asp:Label>
+                            <h6 style="font-size: 18px">Profesores(<asp:Label ID="label_prof" runat="server" Text="0"></asp:Label>
                                 )
                                     <asp:LinkButton ID="LinkButton2" runat="server">Mostrar/Ocultar</asp:LinkButton>
                                 
