@@ -10,7 +10,7 @@ Public Class InstanciarTarea
     Dim tblTareas As DataTable
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Alumno = Session("email")
+        Alumno = Session("usuario")
         Label1Usuario.Text = Alumno
         Label2Tarea.Text = Request.QueryString("codigo")
         Label3HEstimadas.Text = Request.QueryString("horasEst")
@@ -35,7 +35,7 @@ Public Class InstanciarTarea
         Dim tblTareas As DataTable
         Dim drowTareas As DataRow
 
-        Alumno = Session("email")
+        Alumno = Session("usuario")
         CodigoTarea = Label2Tarea.Text
         HEstimadas = Label3HEstimadas.Text
         HReales = TextBox1HReales.Text
@@ -77,7 +77,6 @@ Public Class InstanciarTarea
     End Sub
 
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
-        Session.Abandon()
-        Response.Redirect("../Inicio.aspx")
+        Response.Redirect("../CerrarSesion.aspx")
     End Sub
 End Class

@@ -80,7 +80,7 @@
                                     <asp:LinkButton ID="LinkButton1" runat="server">Mostrar/Ocultar</asp:LinkButton>
                             </h6>
                             <asp:Panel ID="Panel1" runat="server">
-                                <asp:ListBox ID="ListBox1" runat="server" Width="98%" Height="79px"></asp:ListBox>
+                                <asp:ListBox ID="ListBox1Alumn" runat="server" Width="98%" Height="79px"></asp:ListBox>
                             </asp:Panel>
 
                         </td>
@@ -91,7 +91,7 @@
                                 
                             </h6>
                             <asp:Panel ID="Panel2" runat="server">
-                                <asp:ListBox ID="ListBox2" runat="server" Width="100%"></asp:ListBox>
+                                <asp:ListBox ID="ListBox2Profes" runat="server" Width="100%"></asp:ListBox>
 
                             </asp:Panel>
                         </td>

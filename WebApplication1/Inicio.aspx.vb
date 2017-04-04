@@ -5,9 +5,13 @@ Imports System.Security.Cryptography
 
 Public Class Inicio
     Inherits System.Web.UI.Page
-    Dim alumnos As List(Of String)
-    Dim profesores As List(Of String)
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'If IsPostBack Then
+        'MsgBox("Variable Session: " + Session("usuario"))
+        'End If
+
     End Sub
 
     Protected Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
@@ -26,33 +30,28 @@ Public Class Inicio
         Application.Lock()
         If usuario.HasRows Then
             usuario.Read()
-            Session("email") = Email.Text
+            'Session("email") = Email.Text
+            Session("usuario") = Email.Text
             tipo = usuario.Item("tipo")
             If tipo = "P" Then
                 Session("Rol") = "P"
-                'FormsAuthentication.SetAuthCookie("profesor", False)
-                profesores = Application("profesores")
-                If Not profesores.Contains(Session("email")) Then
-                    profesores.Add(Session("email"))
-                End If
+                Application("numProfes") += 1
+                Application("profesOnline").Add(Session("usuario"), Session("usuario"))
                 If Email.Text = "vadillo@ehu.es" Then
-                        System.Web.Security.FormsAuthentication.SetAuthCookie("vadillo@ehu.es", False)
-                    Else
-                        System.Web.Security.FormsAuthentication.SetAuthCookie("profesor", False)
-                    End If
-
-                    Response.Redirect("Profesor/Profesor.aspx")
-                ElseIf tipo = "A" Then
-                    Session("Rol") = "A"
-                    FormsAuthentication.SetAuthCookie("alumno", False)
-                    alumnos = Application("alumnos")
-                    If Not alumnos.Contains(Session("email")) Then
-                        alumnos.Add(Session("email"))
-                    End If
-                    Response.Redirect("Alumnos/Alumno.aspx")
-                Else
+                    System.Web.Security.FormsAuthentication.SetAuthCookie("vadillo@ehu.es", False)
+                ElseIf Email.Text = "admin@ehu.es" Then
                     FormsAuthentication.SetAuthCookie("admin", False)
-                Response.Redirect("Administrador/Administrador.aspx")
+                    Response.Redirect("Administrador/Administrador.aspx")
+                Else
+                    System.Web.Security.FormsAuthentication.SetAuthCookie("profesor", False)
+                End If
+                Response.Redirect("Profesor/Profesor.aspx")
+            ElseIf tipo = "A" Then
+                Session("Rol") = "A"
+                Application("numAlums") += 1
+                Application("alumsOnline").Add(Session("usuario"), Session("usuario"))
+                FormsAuthentication.SetAuthCookie("alumno", False)
+                Response.Redirect("Alumnos/Alumno.aspx")
             End If
             Application.UnLock()
             usuario.Close()

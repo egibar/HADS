@@ -68,7 +68,7 @@
     </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT [codigogrupo] FROM [ProfesoresGrupo] WHERE ([email] = @email)">
             <SelectParameters>
-                <asp:SessionParameter Name="email" SessionField="email" Type="String" />
+                <asp:SessionParameter Name="email" SessionField="usuario" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
     </form>

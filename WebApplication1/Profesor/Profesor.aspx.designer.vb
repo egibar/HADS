@@ -86,13 +86,13 @@ Partial Public Class Profesor
     Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''Control ListBox1.
+    '''Control ListBox1Alumn.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ListBox1 As Global.System.Web.UI.WebControls.ListBox
+    Protected WithEvents ListBox1Alumn As Global.System.Web.UI.WebControls.ListBox
 
     '''<summary>
     '''Control label_prof.
@@ -122,13 +122,13 @@ Partial Public Class Profesor
     Protected WithEvents Panel2 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''Control ListBox2.
+    '''Control ListBox2Profes.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ListBox2 As Global.System.Web.UI.WebControls.ListBox
+    Protected WithEvents ListBox2Profes As Global.System.Web.UI.WebControls.ListBox
 
     '''<summary>
     '''Control cpe.

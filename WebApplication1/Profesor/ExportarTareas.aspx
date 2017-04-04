@@ -31,7 +31,7 @@
           </asp:DropDownList>
           <asp:SqlDataSource ID="AsignaturasProfe" runat="server" ConnectionString="<%$ ConnectionStrings:HADS19TAREASConnectionString %>" SelectCommand="SELECT codigoasig FROM GruposClase INNER JOIN ProfesoresGrupo ON GruposClase.codigo = ProfesoresGrupo.codigogrupo AND ProfesoresGrupo.email = @email">
               <SelectParameters>
-                  <asp:SessionParameter Name="email" SessionField="email" />
+                  <asp:SessionParameter Name="email" SessionField="usuario" />
               </SelectParameters>
           </asp:SqlDataSource>
           <br />

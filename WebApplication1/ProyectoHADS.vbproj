@@ -91,6 +91,7 @@
     <Content Include="App_Data\HAS.xml" />
     <Content Include="App_Data\SEG.xml" />
     <Content Include="App_Data\XSLTFile.xsl" />
+    <Content Include="CerrarSesion.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Profesor\ExportarTareas.aspx" />
     <Content Include="Profesor\ImportarTareasDataSet.aspx" />
@@ -120,6 +121,13 @@
     </Compile>
     <Compile Include="Administrador\Administrador.aspx.vb">
       <DependentUpon>Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CerrarSesion.aspx.designer.vb">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CerrarSesion.aspx.vb">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">

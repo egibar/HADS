@@ -16,7 +16,7 @@ Public Class TareasAlumno
             Dim tblAlmns As New DataTable
             Dim alumno As String
 
-            alumno = Session("email")
+            alumno = Session("usuario")
 
             conectarDB()
             dapAlmns = New SqlDataAdapter("select GruposClase.codigoasig from GruposClase, EstudiantesGrupo where EstudiantesGrupo.Grupo=GruposClase.codigo and EstudiantesGrupo.email='" & alumno & "'", getconexion())
@@ -39,7 +39,7 @@ Public Class TareasAlumno
         Dim alumno As String
         Dim asigSelected As String
 
-        alumno = Session("email")
+        alumno = Session("usuario")
         asigSelected = DDList1Asig.SelectedItem.Text
 
         dapTarea = New SqlDataAdapter("select TareasGenericas.Codigo, TareasGenericas.Descripcion, TareasGenericas.HEstimadas, TareasGenericas.TipoTarea from TareasGenericas where Explotacion='true' AND TareasGenericas.codAsig='" & asigSelected & "'", getconexion())
@@ -72,7 +72,6 @@ Public Class TareasAlumno
     End Sub
 
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
-        Session.Abandon()
-        Response.Redirect("../Inicio.aspx")
+      Response.Redirect("../CerrarSesion.aspx")
     End Sub
 End Class
