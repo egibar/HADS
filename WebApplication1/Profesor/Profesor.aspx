@@ -97,8 +97,6 @@
                         </td>
                     </tr>
                 </table>
-
-
                 
                 <ajaxToolkit:CollapsiblePanelExtender ID="cpe" runat="Server"
                     TargetControlID="Panel1"
