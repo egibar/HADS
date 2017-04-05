@@ -35,25 +35,29 @@ Public Class Inicio
             tipo = usuario.Item("tipo")
             If tipo = "P" Then
                 Session("Rol") = "P"
-                Application("numProfes") += 1
-                Application("profesOnline").Add(Session("usuario"), Session("usuario"))
-                If Email.Text = "vadillo@ehu.es" Then
-                    System.Web.Security.FormsAuthentication.SetAuthCookie("vadillo@ehu.es", False)
-                ElseIf Email.Text = "admin@ehu.es" Then
-                    FormsAuthentication.SetAuthCookie("admin", False)
-                    Response.Redirect("Administrador/Administrador.aspx")
-                Else
-                    System.Web.Security.FormsAuthentication.SetAuthCookie("profesor", False)
+                If Not Application("profesOnline").Contains(Session("usuario")) Then
+                    Application("numProfes") += 1
+                    Application("profesOnline").Add(Session("usuario"), Session("usuario"))
                 End If
-                Response.Redirect("Profesor/Profesor.aspx")
-            ElseIf tipo = "A" Then
-                Session("Rol") = "A"
-                Application("numAlums") += 1
-                Application("alumsOnline").Add(Session("usuario"), Session("usuario"))
+                If Email.Text = "vadillo@ehu.es" Then
+                        System.Web.Security.FormsAuthentication.SetAuthCookie("vadillo@ehu.es", False)
+                    ElseIf Email.Text = "admin@ehu.es" Then
+                        FormsAuthentication.SetAuthCookie("admin", False)
+                        Response.Redirect("Administrador/Administrador.aspx")
+                    Else
+                        System.Web.Security.FormsAuthentication.SetAuthCookie("profesor", False)
+                    End If
+                    Response.Redirect("Profesor/Profesor.aspx")
+                ElseIf tipo = "A" Then
+                    Session("Rol") = "A"
+                If Not Application("alumsOnline").Contains(Session("usuario")) Then
+                    Application("numAlums") += 1
+                    Application("alumsOnline").Add(Session("usuario"), Session("usuario"))
+                End If
                 FormsAuthentication.SetAuthCookie("alumno", False)
-                Response.Redirect("Alumnos/Alumno.aspx")
-            End If
-            Application.UnLock()
+                    Response.Redirect("Alumnos/Alumno.aspx")
+                End If
+                Application.UnLock()
             usuario.Close()
         Else
             Label1Informativo.Visible = True

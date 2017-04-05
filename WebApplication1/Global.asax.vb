@@ -42,20 +42,28 @@ Public Class Global_asax
 
     Sub Session_End(ByVal sender As Object, ByVal e As EventArgs)
         ' Fires when the session ends
-        'Application.Lock()
-
-        'alumnos = Application("alumnos")
-        'profesores = Application("profesores")
-        'If Session("Rol") = "A" Then
-        'alumnos.Remove(Session("email"))
-        'ElseIf Session("Rol") = "P" Then
-        'profesores.Remove(Session("email"))
-        'End If
-        'Application.UnLock()
+        Application.Lock()
+        If (Session("Rol") = "A") Then
+            Application("numAlums") -= 1
+            Application("alumsOnline").Remove(Session("usuario"))
+        Else
+            Application("numProfes") -= 1
+            Application("profesOnline").Remove(Session("usuario"))
+        End If
+        Application.UnLock()
     End Sub
 
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
         ' Fires when the application ends
+        Application.Lock()
+        If (Session("Rol") = "A") Then
+            Application("numAlums") -= 1
+            Application("alumsOnline").Remove(Session("usuario"))
+        Else
+            Application("numProfes") -= 1
+            Application("profesOnline").Remove(Session("usuario"))
+        End If
+        Application.UnLock()
     End Sub
 
 End Class
