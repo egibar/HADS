@@ -50,11 +50,11 @@ Partial Public Class Coordinador
     Protected WithEvents LblResultMedia As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control Button1.
+    '''Control ButtonCalcular.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ButtonCalcular As Global.System.Web.UI.WebControls.Button
 End Class

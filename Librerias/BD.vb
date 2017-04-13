@@ -74,11 +74,8 @@ Public Class BD
 
         Dim numregs As Integer
         comando = New SqlCommand(st, conexion)
-        'Try
         numregs = comando.ExecuteNonQuery()
-        ' Catch ex As Exception
-        'Return ex.Message
-        'End Try
+
         If numregs = 1 Then
             Return CONFIRMADO
         Else

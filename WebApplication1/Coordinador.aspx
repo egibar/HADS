@@ -40,7 +40,7 @@
   <tr>
     <td>&nbsp;</td>
     <td class="auto-style1">
-        <asp:Button ID="Button1" runat="server" Text="Button" align="right" />
+        <asp:Button ID="ButtonCalcular" runat="server" Text="Calcular" align="right" style="margin-left: 23px" />
       </td>
   </tr>
 </table>
