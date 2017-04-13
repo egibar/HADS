@@ -66,12 +66,6 @@ Public Class BD
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
-        ' If comando.ExecuteScalar() = 1 Then
-        'Return True
-        'Else
-        'Return False
-        'End If
     End Function
 
     Public Shared Function ActivarUsuario(ByVal email As String, numeroconfirmacion As Integer) As String
@@ -122,5 +116,23 @@ Public Class BD
         Return (comando.ExecuteReader())
     End Function
 
+    Function DedicacionMediaAlumnos(miAsignatura As String) As Double
+
+        Dim media As Double = 0.0
+        Dim datareader As SqlDataReader
+        Try
+            conectarDB()
+            Dim st As String = "SELECT AVG(EstudiantesTareas.HReales) AS Media FROM Asignaturas JOIN TareasGenericas ON Asignaturas.codigo = TareasGenericas.CodAsig JOIN EstudiantesTareas ON TareasGenericas.Codigo = EstudiantesTareas.CodTarea WHERE Asignaturas.codigo = '" & miAsignatura & "'"
+            Dim comando As New SqlCommand(st, conexion)
+            datareader = comando.ExecuteReader()
+            While (datareader.Read)
+                media = Convert.ToDouble(datareader("Media"))
+            End While
+
+        Catch ex As Exception
+            MsgBox("Ha ocurrido una fallo al calcular la media")
+        End Try
+        Return media
+    End Function
 End Class
 

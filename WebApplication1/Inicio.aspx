@@ -26,8 +26,7 @@
       <br />
       <br />
     </div>
-    <div class="labels">
-
+    <div class="labels" >
         <asp:Label ID="LabelEmail" runat="server" Text="Email"></asp:Label><br />
         <asp:TextBox ID="Email" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredValidatorEmail" runat="server" ControlToValidate="Email" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -38,10 +37,9 @@
         <asp:Label ID="LabelPassword" runat="server" Text="Password"></asp:Label><br />
         <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredValidatorPassword" runat="server" ControlToValidate="Password" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <!--<asp:RegularExpressionValidator ID="RegExprValid2" runat="server" ErrorMessage="Password incorrecto" ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" ControlToValidate="Password" ForeColor="Red"></asp:RegularExpressionValidator>
+           <!--<asp:RegularExpressionValidator ID="RegExprValid2" runat="server" ErrorMessage="Password incorrecto" ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" ControlToValidate="Password" ForeColor="Red"></asp:RegularExpressionValidator>
        -->
-                         <br />
-
+        <br />
         <br />
 
         <asp:Button ID="ButtonLogin" runat="server" Text="Login" class="form-btn"/>

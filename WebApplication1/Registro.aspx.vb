@@ -1,10 +1,13 @@
-﻿Imports Librerias
+﻿Imports Librerias.BD
+Imports Librerias
 Imports Librerias.Seguridad
+
 Imports System.Security.Cryptography
 
 Public Class Registro
     Inherits System.Web.UI.Page
 
+    Dim estaMatriculado As New matriculas.Matriculas
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
@@ -12,12 +15,19 @@ Public Class Registro
     Protected Sub btnRegistrarse_Click(sender As Object, e As EventArgs) Handles btnRegistrarse.Click
 
         'Mirar si el usuario existe en la BD
-        BD.conectarDB()
+        conectarDB()
         Label1Info.Visible = True
-        If (BD.existeUsuario(Email.Text) = True) Then
-            Label1Info.Text = "Este usuario ya existe en la Base de Datos"
-            Label1Info.ForeColor = Drawing.Color.Red
+        Dim permitirReg As Boolean = False
+
+        If (estaMatriculado.comprobar(Email.Text) = "SI") Then
+            permitirReg = True
+            Label1Info.Text = " "
         Else
+            Label1Info.ForeColor = Drawing.Color.Red
+            Label1Info.Text = "El usuario correo no pertenece a un usuario matriculado."
+        End If
+
+        If permitirReg Then
 
             Randomize()
             Dim NumConf As Single
@@ -27,9 +37,11 @@ Public Class Registro
             Dim md5Hash As MD5 = MD5.Create()
             Dim passCifrada As String = getMd5Hash(md5Hash, Password.Text)
 
+            'Insertamos el usuario
             Dim resp As String
-            resp = BD.insertarUsuario(Email.Text, Nombre.Text, Pregunta.Text, Respuesta.Text, DNI.Text, NumConf, False, vbNullString, vbNullString, passCifrada)
-            If (resp = BD.INSERTADO) Then
+            resp = insertarUsuario(Email.Text, Nombre.Text, Pregunta.Text, Respuesta.Text, DNI.Text, NumConf, False, vbNullString, vbNullString, passCifrada)
+            If (resp = INSERTADO) Then
+                'si se ha insertado bien se envía un email
                 If (mail(NumConf, Email.Text)) Then
                     Label1Info.ForeColor = Drawing.Color.Green
                     Label1Info.Text = "Se ha enviado un correo a " + Email.Text
@@ -39,7 +51,7 @@ Public Class Registro
                 End If
             End If
         End If
-        BD.cerrarconexionDB()
+        cerrarconexionDB()
     End Sub
 
     Protected Function mail(ByVal num As Integer, ByVal address As String) As Boolean
