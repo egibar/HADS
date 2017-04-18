@@ -113,7 +113,7 @@ Public Class BD
         Return (comando.ExecuteReader())
     End Function
 
-    Function DedicacionMediaAlumnos(miAsignatura As String) As Double
+    Public Shared Function dedicacionAlumnos(ByVal miAsignatura As String) As Double
 
         Dim media As Double = 0.0
         Dim datareader As SqlDataReader
@@ -129,6 +129,7 @@ Public Class BD
         Catch ex As Exception
             MsgBox("Ha ocurrido una fallo al calcular la media")
         End Try
+        cerrarconexionDB()
         Return media
     End Function
 End Class

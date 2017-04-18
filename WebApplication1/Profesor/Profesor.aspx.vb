@@ -19,6 +19,13 @@
             ListBox2Profes.DataBind()
         End If
 
+        'solo "vadillo@ehu.es" tendra permiso para coordinar
+        If Session("usuario") = "vadillo@ehu.es" Then
+            coordinar.Visible = True
+        Else
+            coordinar.Visible = False
+        End If
+
     End Sub
 
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click

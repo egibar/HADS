@@ -21,10 +21,6 @@
             height: 50px;
             width: 671px;
         }
-        .auto-style5 {
-              width: 164px;
-              height: 30px;
-          }
           .auto-style6 {
               height: 51px;
               width: 164px;
@@ -38,11 +34,19 @@
               width: 671px;
           }
           .auto-style9 {
-              height: 97px;
+              height: 72px;
           }
           .auto-style10 {
               width: 164px;
-              height: 30px;
+              height: 15px;
+          }
+          .auto-style11 {
+              width: 164px;
+              height: 26px;
+          }
+          .auto-style12 {
+              width: 522px;
+              height: 364px;
           }
         </style>
 </head>
@@ -55,7 +59,7 @@
     </div>
     <div class="labels" >
       <br />
-      <table align="center" style="border: medium solid #0066FF; width: 522px; height: 379px" border="0">
+      <table align="center" style="border: medium solid #0066FF; " border="0" class="auto-style12">
         <tr>
              <td class="auto-style7" align="center">
                  Correo Usuario: <br />
@@ -87,12 +91,15 @@
             </td>
          </tr>
           <tr>
-           <td class="auto-style5">
+           <td class="auto-style11">
                <asp:HyperLink ID="HyperLinkCambiarPassword" runat="server" NavigateUrl="~/CambiarContraseña.aspx">CambiarPassword</asp:HyperLink>
            </td>           
           </tr>
-        </table>
         <br />
+        <br />
+        <br />
+        <br />
+        </table>
     </div>
         <div id="divInformativo" style="height: 284px">
             <asp:Label ID="Label1Informativo" runat="server" Visible="False"></asp:Label>

@@ -54,6 +54,8 @@
           <li><a href='ImportarTareasDataSet.aspx'>Importar v.DataSet</a></li>
           <li><a href='ExportarTareas.aspx'>Exportar</a></li>
           <li><a href='VerTareasconXSLT.aspx'>Ver Tareas con XSLT</a></li>
+          <li><a href='coordinador.aspx'><asp:Label ID="coordinar" runat="server" Text="Coordinar" Visible="False"></asp:Label></a>
+          </li>
       </ul>
     <div style="height: 577px; width: 1067px; float:right; margin-left: 7px;" id="divRight">
             <div align="right" style="height: 25px">
