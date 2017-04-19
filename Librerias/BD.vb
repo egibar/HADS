@@ -2,7 +2,7 @@
 
 Public Class BD
 
-    Private Shared conexion As New SqlConnection
+    Public Shared conexion As New SqlConnection
     Private Shared comando As New SqlCommand
 
     Public Const INSERTADO As String = "INSERTADO"

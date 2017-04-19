@@ -30,35 +30,37 @@ Public Class Registro
         End If
 
         'En el caso de que este matriculado continuar con el registro
-        conectarDB()
-        If permitirReg And existeUsuario(Email.Text) = False Then
-            Randomize()
-            Dim NumConf As Single
-            NumConf = CLng(Rnd() * 9000000) + 1000000
+        If permitirReg Then
+            conectarDB()
+            If existeUsuario(Email.Text) = False Then
+                Randomize()
+                Dim NumConf As Single
+                NumConf = CLng(Rnd() * 9000000) + 1000000
 
-            'Cifrar el pass antes de meterlo en la BD
-            Dim md5Hash As MD5 = MD5.Create()
-            Dim passCifrada As String = getMd5Hash(md5Hash, Password.Text)
+                'Cifrar el pass antes de meterlo en la BD
+                Dim md5Hash As MD5 = MD5.Create()
+                Dim passCifrada As String = getMd5Hash(md5Hash, Password.Text)
 
-            'Insertamos el usuario
-            Label1Info.Visible = True
-            Dim resp As String
-            resp = insertarUsuario(Email.Text, Nombre.Text, Pregunta.Text, Respuesta.Text, DNI.Text, NumConf, False, vbNullString, vbNullString, passCifrada)
-            If (resp = INSERTADO) Then
-                'si se ha insertado bien se envía un email
-                If (mail(NumConf, Email.Text)) Then
-                    Label1Info.ForeColor = Drawing.Color.Green
-                    Label1Info.Text = "Se ha enviado un correo a " + Email.Text
-                Else
-                    Label1Info.ForeColor = Drawing.Color.Red
-                    Label1Info.Text = "Ha habido un error al enviar el email"
+                'Insertamos el usuario
+                Label1Info.Visible = True
+                Dim resp As String
+                resp = insertarUsuario(Email.Text, Nombre.Text, Pregunta.Text, Respuesta.Text, DNI.Text, NumConf, False, vbNullString, vbNullString, passCifrada)
+                If (resp = INSERTADO) Then
+                    'si se ha insertado bien se envía un email
+                    If (mail(NumConf, Email.Text)) Then
+                        Label1Info.ForeColor = Drawing.Color.Green
+                        Label1Info.Text = "Se ha enviado un correo a " + Email.Text
+                    Else
+                        Label1Info.ForeColor = Drawing.Color.Red
+                        Label1Info.Text = "Ha habido un error al enviar el email"
+                    End If
                 End If
-            End If
-        Else
+            Else
 
-            Label1Info.Text = "El usuario ya existe en la base de datos"
+                Label1Info.Text = "El usuario ya existe en la base de datos"
+            End If
+            cerrarconexionDB()
         End If
-        cerrarconexionDB()
     End Sub
 
     Protected Function mail(ByVal num As Integer, ByVal address As String) As Boolean
