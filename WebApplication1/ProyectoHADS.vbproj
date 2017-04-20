@@ -95,8 +95,8 @@
     <Content Include="App_Data\SEG.xml" />
     <Content Include="App_Data\XSLTFile.xsl" />
     <Content Include="CerrarSesion.aspx" />
-    <Content Include="Coordinacion.asmx" />
-    <Content Include="Coordinador.aspx" />
+    <Content Include="Profesor\Coordinacion.asmx" />
+    <Content Include="Profesor\Coordinador.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Profesor\ExportarTareas.aspx" />
     <Content Include="Profesor\ImportarTareasDataSet.aspx" />
@@ -135,14 +135,14 @@
       <DependentUpon>CerrarSesion.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Coordinacion.asmx.vb">
+    <Compile Include="Profesor\Coordinacion.asmx.vb">
       <DependentUpon>Coordinacion.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Coordinador.aspx.designer.vb">
+    <Compile Include="Profesor\Coordinador.aspx.designer.vb">
       <DependentUpon>Coordinador.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Coordinador.aspx.vb">
+    <Compile Include="Profesor\Coordinador.aspx.vb">
       <DependentUpon>Coordinador.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>

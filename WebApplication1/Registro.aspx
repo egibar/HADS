@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Registro.aspx.vb" Inherits="WebApplication1.Registro" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -38,10 +40,11 @@
         &nbsp;<asp:RegularExpressionValidator ID="RegExprValidApellido" runat="server" ControlToValidate="Apellido" ErrorMessage="No es un apellido válido" ValidationExpression="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$" ForeColor="Red"></asp:RegularExpressionValidator>
 
        <br />
-       <asp:Label ID="LabelEmail" runat="server" Text="Email"></asp:Label><br />
+       <asp:Label ID="LabelEmail" runat="server" Text="Email"></asp:Label>
+       <br />
        <asp:TextBox ID="Email" runat="server" Height="25px" Width="220px"></asp:TextBox>
        <asp:RequiredFieldValidator ID="RequiredValidatorEmail" runat="server" ControlToValidate="Email" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-       <asp:RegularExpressionValidator ID="RegExprValidMail" runat="server" ControlToValidate="Email" ErrorMessage="Email incorrecto" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+       &nbsp;<asp:RegularExpressionValidator ID="RegExprValidMail" runat="server" ControlToValidate="Email" ErrorMessage="Email incorrecto" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>      
        <br />
        <asp:Label ID="LabelPassword" runat="server" Text="Password"></asp:Label><br />
        <asp:TextBox ID="Password" TextMode="Password" runat="server" Height="25px" Width="220px"></asp:TextBox>
@@ -71,11 +74,8 @@
 
        <br />
        <br />
-
        <br />
-
        <br />
-
        <asp:Button ID="btnRegistrarse" runat="server" Text="Registrarse" class="form-btn"/>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        <asp:Button ID="btnVolverInicio" runat="server" CausesValidation="False" Text="Volver a inicio" />

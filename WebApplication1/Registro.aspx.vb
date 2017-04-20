@@ -81,4 +81,7 @@ Public Class Registro
         Response.Redirect("Inicio.aspx")
     End Sub
 
+    Protected Sub Email_TextChanged(sender As Object, e As EventArgs) Handles Email.TextChanged
+
+    End Sub
 End Class

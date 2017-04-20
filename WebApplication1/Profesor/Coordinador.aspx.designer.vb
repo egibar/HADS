@@ -23,6 +23,15 @@ Partial Public Class Coordinador
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control Button2CerrarSesion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Button2CerrarSesion As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control AlumnAsignaturas.
     '''</summary>
     '''<remarks>
@@ -57,4 +66,13 @@ Partial Public Class Coordinador
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ButtonCalcular As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control HyperLink1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HyperLink1 As Global.System.Web.UI.WebControls.HyperLink
 End Class
