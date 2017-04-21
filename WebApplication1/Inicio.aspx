@@ -23,30 +23,31 @@
         }
           .auto-style6 {
               height: 51px;
-              width: 164px;
+              width: 173px;
           }
           .auto-style7 {
               height: 57px;
-              width: 164px;
+              font-size:medium;
+              width: 173px;
           }
           .auto-style8 {
               height: 57px;
               width: 671px;
           }
           .auto-style9 {
-              height: 72px;
+              height: 51px;
           }
           .auto-style10 {
-              width: 164px;
+              width: 173px;
               height: 15px;
           }
           .auto-style11 {
-              width: 164px;
+              width: 173px;
               height: 26px;
           }
           .auto-style12 {
               width: 522px;
-              height: 364px;
+              height: 353px;
           }
         </style>
 </head>
@@ -62,7 +63,8 @@
       <table align="center" style="border: medium solid #0066FF; " border="0" class="auto-style12">
         <tr>
              <td class="auto-style7" align="center">
-                 Correo Usuario: <br />
+                 <asp:Label ID="Label1CorreoUsuario" runat="server" Font-Size="Large" Text="Correo Usuario"></asp:Label>
+                 :<br />
              </td>
              <td class="auto-style8">
                 <asp:TextBox ID="Email" runat="server" style="margin-left: 0px"></asp:TextBox>
@@ -72,7 +74,7 @@
          </tr>
          <tr>
             <td class="auto-style6" align="center">
-                 <asp:Label ID="LabelPassword" runat="server" Text="Password"></asp:Label>:<br />
+                 <asp:Label ID="LabelPassword" runat="server" Text="Password" Font-Size="Large"></asp:Label>:<br />
             </td>
             <td class="auto-style4">
                  <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
@@ -82,7 +84,7 @@
          </tr>
          <tr>
              <td style="margin-top: 40px" colspan="2" align="right" class="auto-style9">
-                  <asp:Button ID="ButtonLogin" runat="server" Text="Login" class="form-btn" style="margin-left: 0px" Width="106px"/>
+                  <asp:Button ID="ButtonLogin" runat="server" Text="Login" class="form-btn" style="margin-left: 0px" Width="121px" Height="32px"/>
              </td>
          </tr>
           <tr>

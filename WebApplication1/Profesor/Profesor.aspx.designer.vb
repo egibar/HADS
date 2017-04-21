@@ -41,6 +41,24 @@ Partial Public Class Profesor
     Protected WithEvents Button2CerrarSesion As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control Label1UsuConec.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Label1UsuConec As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control Label1ProfeConec.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Label1ProfeConec As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control ScriptManager1.
     '''</summary>
     '''<remarks>

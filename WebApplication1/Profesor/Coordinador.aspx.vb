@@ -5,6 +5,9 @@
     Dim miWebService As New Coordinacion
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+        Label1Coordinador.Text = Session("usuario")
+
         'solo "vadillo@ehu.es" tendra permiso para coordinar
         If Session("usuario") <> "vadillo@ehu.es" Then
             MsgBox("No tienes permiso para acceder a este fichero")
@@ -17,7 +20,6 @@
     End Sub
 
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
-        Session.Abandon()
-        Response.Redirect("../Inicio.aspx")
+        Response.Redirect("../CerrarSesion.aspx")
     End Sub
 End Class

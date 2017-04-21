@@ -52,7 +52,7 @@ Public Class InsertarTarea
     End Sub
 
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click
-        Session.Abandon()
-        Response.Redirect("../Inicio.aspx")
+        'Session.Abandon()
+        Response.Redirect("../CerrarSesion.aspx")
     End Sub
 End Class

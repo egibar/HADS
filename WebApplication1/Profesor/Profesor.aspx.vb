@@ -26,6 +26,7 @@
             coordinar.Visible = False
         End If
 
+        Label1ProfeConec.Text = Session("usuario")
     End Sub
 
     Protected Sub Button2CerrarSesion_Click(sender As Object, e As EventArgs) Handles Button2CerrarSesion.Click

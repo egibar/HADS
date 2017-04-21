@@ -8,6 +8,7 @@ Public Class Registro
     Inherits System.Web.UI.Page
 
     Dim estaMatriculado As New matriculas.Matriculas
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Label1Info.Text = " "
         Label1Info.Visible = False

@@ -37,7 +37,12 @@
        </div>
        <table border="0" style="width: 591px; height: 372px">
   <tr>
-    <td colspan="2"><h1>Coordinador</h1></td>
+    <td colspan="2"><h1>Coordinador:
+        <asp:Label ID="Label1Coordinador" runat="server" Font-Names="Arial Narrow" Font-Size="Medium" ForeColor="#3366FF"></asp:Label>
+        </h1>
+        <div>
+        </div>
+      </td>
   </tr>
   <tr>
     <td class="auto-style4">Asignatura:</td>

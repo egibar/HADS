@@ -61,6 +61,8 @@
             <div align="right" style="height: 25px">
              <asp:Button ID="Button2CerrarSesion" runat="server" BackColor="Black" Font-Bold="True" Font-Names="Arial Black" Font-Size="10pt" ForeColor="White" Height="29px" Text="Cerrar Sesión" Width="164px" /> 
             </div> 
+            <asp:Label ID="Label1UsuConec" runat="server" Font-Size="Small" Text="Usuario conectado: "></asp:Label>
+            <asp:Label ID="Label1ProfeConec" runat="server" Font-Names="Arial Rounded MT Bold" Font-Size="Medium" ForeColor="#3366FF"></asp:Label>
             </br>
             <p align="center">Gestión Web de Tareas-Dedicación</p>
             <p align="center">Profesores</p>
