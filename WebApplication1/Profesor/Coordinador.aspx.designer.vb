@@ -41,6 +41,15 @@ Partial Public Class Coordinador
     Protected WithEvents Label1Coordinador As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control Label1Asig.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Label1Asig As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control AlumnAsignaturas.
     '''</summary>
     '''<remarks>
@@ -57,6 +66,15 @@ Partial Public Class Coordinador
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''Control Label1Media.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Label1Media As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control LblResultMedia.
